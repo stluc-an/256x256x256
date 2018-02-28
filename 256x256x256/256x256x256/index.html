@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style> 
+			body, html {
+				font-family: sans-serif;
+				padding: 0; 
+				margin: 0;
+				background: black;
+	  		} 
+			iframe {
+				width: 256px;
+				height: 256px;
+				border: none;
+			}
+			.center{
+				margin: 0 ;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				overflow: hidden;
+				text-align: center;
+			}
+			h1, h2, p{
+				color: white;
+				margin :0;
+			}
+			h1{
+				font-size: 40px;
+			}
+			h2{
+				font-size: 20px;
+			}
+			.wrapper{
+			    box-shadow: rgba(255, 255, 255, 0.3) 0 0 100px 1px;
+			    height: 0px;
+			}
+		</style>
+		<script src="../libs/Animator.js"></script>
+		<script src="./script.js"></script>
+	</head>
+	<body>
+		<div class="center">
+			<h2>
+				<p>score : <b class="score">0</b> / 256</p>
+			</h2>
+			<h1>
+				<b class="title">256x256x256</b>
+			</h1>
+			<h2 class="win">
+				<p>level : <b class="lvl">0xBF</b></p>
+			</h2>
+		</div>
+		<div class="center wrapper">
+			<iframe><iframe>
+		</div>
+	</body>
+</html
+
+
+
