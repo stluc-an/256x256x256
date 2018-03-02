@@ -2,170 +2,127 @@
   256x256x256 - script.js
   @author Evrard Vincent (vincent@ogre.be)
   @Date:   2018-02-27 12:27:03
-  @Last Modified time: 2018-02-28 12:51:24
+  @Last Modified time: 2018-03-01 14:18:30
 \*----------------------------------------*/
-//let availableApp = (new Array(256)).fill().map((p, k)=>k);
-let availableApp = [25, 177, 178];
-let chainApp = [];
-let timeout ;
-let maxAppDuration = 14000;
-function lerp(A, B, t){
-	return A + t * (B - A);
+//let availableLVL = (new Array(256)).fill().map((p, k)=>{k = k.toString(16);while(k.length<2) k = "0"+k;return "0x"+k});
+let availableLVL = ["0x19", "0xB1", "0xB2"];
+let historyLVL = [];
+let failTimeout ;
+let failAfter = 4000;
+let scoreDom;
+let winDom;
+let iframeDom;
+let iframeWrapperDom;
+let lvlDom;
+
+document.addEventListener("DOMContentLoaded", setup);
+window.onmessage = onMessageFromLVL;
+
+function setup(){
+	lvlDom = document.getElementsByClassName("lvl")[0];
+	winDom = document.getElementsByClassName("win")[0];
+	scoreDom = document.getElementsByClassName("score")[0];
+	iframeDom = document.getElementsByTagName("IFRAME")[0];
+	iframeWrapperDom = document.getElementsByClassName("wrapper")[0];
+	iframeDom.onload = onLevelLoaded;
+	requestAnimationFrame(runAnimator);
+	nextLVL();
 }
 
-
-function nextApp(){
-	let n = availableApp.splice(Math.floor(Math.random() * availableApp.length), 1)[0];
-	document.getElementsByClassName("score")[0].innerText = chainApp.length;
-	if(undefined == n){
-		return win();
-	}
-	n = n.toString(16);
-	while(n.length<2){
-		n = "0"+n;
-	}
-	chainApp.push("0x"+n.toUpperCase());
-	document.getElementsByClassName("lvl")[0].innerText = chainApp[chainApp.length-1];
-	Close(function(){
-		Magnify(375);
-		document.getElementsByTagName("IFRAME")[0].src = "../"+chainApp[chainApp.length-1]+"/index.html";
-	});
-};
-
-function win(){
-	document.getElementsByClassName("win")[0].innerText = "YOU WIN";
-	Close(function(){
-		var target = document.getElementsByClassName("win")[0];
-		new Animator(
-			500, 
-			function(percent){
-				target.style.fontSize = (this.FS + 50 * Math.sin(
-															-1 * Math.PI * lerp(
-																1, 0.95, lerp(
-																	1, 0.2, Math.abs(
-																		Math.sin(
-																			0.3 * percent*2*Math.PI
-																		)
-																	)
-																)
-															)
-														)
-										) + "px";
-			}, function(){
-				this.FS = 20;
-			}, function(){
-				target.style.fontSize = this.FS + "px";
-				this.start();
-			}
-		).start();
-	});
-	return ;
-}
-
-function prevApp(){
-	availableApp.push(parseInt(chainApp.pop(), 16));
-	document.getElementsByClassName("lvl")[0].innerText = chainApp[chainApp.length-1];
-	Close(function(){
-		Minify(375);
-		document.getElementsByClassName("score")[0].innerText = chainApp.length-1;
-		document.getElementsByTagName("IFRAME")[0].src = "../"+chainApp[chainApp.length-1]+"/index.html";
-	})
-};
-
-window.onmessage = function(e){
+function onMessageFromLVL (e){
 	if(e.data == "SUCCESS"){
-		clearTimeout(timeout);
-		nextApp();
+		clearTimeout(failTimeout);
+		nextLVL();
 	}
 }
 
-document.addEventListener("DOMContentLoaded", function(){
-	nextApp();
-	function run(){
-		Animator.update();
-		requestAnimationFrame(run);
+function gameOver(success){
+	let anim;
+	if(success){
+		winDom.innerText = "YOU WIN";
+		anim = function(){
+			win(winDom);
+		}
+	}else{
+		winDom.innerText = "YOU LOOSE";	
+		anim = function(){
+			loose(winDom);
+		}
 	}
-	requestAnimationFrame(run);
+	Close(anim);
+}
 
-	document.getElementsByTagName("IFRAME")[0].onload = function(){
-		setTimeout(function(){
-			Open(function(){
-				clearTimeout(timeout);
-				timeout = setTimeout(function(){
-					prevApp();
-				}, maxAppDuration)
-			});
-		}, 750);
+function nextLVL(){
+	let lvl = getRandomLVL();
+	if(isGameOver(lvl)){
+		setScore2Display();
+		return gameOver(true);//with success
 	}
-
-});
-
-
-
-function Magnify(time){
-	var target = document.getElementsByClassName("score")[0];
-	new Animator(
-		time*2, 
-		function(percent){
-			target.style.fontSize = (this.FS + 20 * Math.sin(Math.PI * percent)) + "px";
-		}, function(){
-			this.FS = 20;
-		}, function(){
-			target.style.fontSize = this.FS + "px";
-		}
-	).start();
+	setLvl2Display(lvl);
+	Close(function(){
+		Magnify(375, scoreDom);
+		setScore2Display();
+		setLevel(lvl);
+	});
 }
 
-function Minify(time){
-	var target = document.getElementsByClassName("score")[0];
-	new Animator(
-		time*2, 
-		function(percent){
-			target.style.fontSize = (this.FS - 10 * Math.sin(Math.PI * percent)) + "px";
-		}, function(){
-			this.FS = 20;
-		}, function(){
-			target.style.fontSize = this.FS + "px";
-		}
-	).start();
+function prevLVL(){
+	let lvl = getLastLVL();
+	if(isGameOver(lvl)){
+		setScore2Display();
+		return gameOver(false);//without success
+	}
+	setLvl2Display(lvl);
+	Close(function(){
+		Minify(375, scoreDom);
+		setScore2Display();
+		setLevel(lvl);
+	});
 }
 
-function Close(callback){
-	var target = document.getElementsByTagName("IFRAME")[0];
-	var wrapper = document.getElementsByClassName("wrapper")[0];
-	new Animator(
-		500, 
-		function(percent){
-			percent = Math.pow(percent, 0.5)
-			//wrapper.style.opacity = percent;
-			wrapper.style.height = ((1-percent) * 256)+"px";
-			target.style.marginTop = (-1 * (percent) * 128)+"px";
-		}, function(){}, function(){
-			//wrapper.style.opacity = 0;
-			wrapper.style.height = "0px";
-			target.style.marginTop = "-128px";
-			if(callback)callback();
-		}
-	).start();
+function runAnimator(){
+	Animator.update();
+	requestAnimationFrame(runAnimator);
 }
 
-function Open(callback){
-	var target = document.getElementsByTagName("IFRAME")[0];
-	var wrapper = document.getElementsByClassName("wrapper")[0];
-	new Animator(
-		500, 
-		function(percent){
-			percent = Math.pow(percent, 2)
-			//wrapper.style.opacity = percent;
-			wrapper.style.height = ((percent) * 256)+"px";
-			target.style.marginTop = (-1 * (1-percent) * 128)+"px";
-		},
-		function(){},
-		function(){
-			//wrapper.style.opacity = 1;
-			wrapper.style.height = "256px";
-			target.style.marginTop = "0px";
-			if(callback)callback();
-		}
-	).start();
+function onLevelLoaded(){
+	setTimeout(function(){
+		Open(function(){
+			clearTimeout(failTimeout);
+			failTimeout = setTimeout(prevLVL, failAfter);
+		});
+	}, 750);
+}
+
+function isGameOver(lvl){
+	return undefined == lvl;
+}
+
+function getLastLVL(){
+	availableLVL.push(historyLVL.pop());
+	return historyLVL[historyLVL.length-1];
+}
+
+function getRandomLVL(){
+	// return level name 
+	// or
+	// return undefined in case of no more level
+	let currentLvl = availableLVL.splice(Math.floor(Math.random() * availableLVL.length), 1)[0];
+	if(undefined != currentLvl){
+		historyLVL.push(currentLvl);
+	}
+	return currentLvl; 
+}
+
+function setLvl2Display(lvl){
+	lvlDom.innerText = lvl;
+}
+
+function setScore2Display(){
+	let score = historyLVL.length - 1;
+	scoreDom.innerText = score>0 ? score : 0  ;
+}
+
+function setLevel(lvl){
+	iframeDom.src = "../"+lvl+"/index.html";
 }
