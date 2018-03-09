@@ -2,13 +2,13 @@
   256x256x256 - script.js
   @author Evrard Vincent (vincent@ogre.be)
   @Date:   2018-02-27 12:27:03
-  @Last Modified time: 2018-03-01 14:18:30
+  @Last Modified time: 2018-03-08 19:00:30
 \*----------------------------------------*/
 //let availableLVL = (new Array(256)).fill().map((p, k)=>{k = k.toString(16);while(k.length<2) k = "0"+k;return "0x"+k});
 let availableLVL = ["0x19", "0xB1", "0xB2"];
 let historyLVL = [];
 let failTimeout ;
-let failAfter = 4000;
+let failAfter = 14000;
 let scoreDom;
 let winDom;
 let iframeDom;
@@ -86,12 +86,14 @@ function runAnimator(){
 }
 
 function onLevelLoaded(){
-	setTimeout(function(){
-		Open(function(){
-			clearTimeout(failTimeout);
-			failTimeout = setTimeout(prevLVL, failAfter);
-		});
-	}, 750);
+	if(iframeDom.src){
+		setTimeout(function(){
+			Open(function(){
+				clearTimeout(failTimeout);
+				failTimeout = setTimeout(prevLVL, failAfter);
+			});
+		}, 750);
+	}
 }
 
 function isGameOver(lvl){
