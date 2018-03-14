@@ -2,8 +2,15 @@
   256x256x256 - MouseInteractive.js
   @author Evrard Vincent (vincent@ogre.be)
   @Date:   2018-02-25 20:07:45
-  @Last Modified time: 2018-02-26 14:11:48
+  @Last Modified time: 2018-03-14 17:53:37
 \*----------------------------------------*/
+function keyPressed(){
+
+}
+function keyReleased(){
+
+}
+
 class MouseInteractive{
 	constructor(){
 		this.wasOver = false;
@@ -81,7 +88,10 @@ class MouseInteractive{
 			this.lastMoveTime = now;
 		}
 		
-
+		if((keyCode==ALT || keyCode==CONTROL) && keyIsPressed){
+			this.trigger("metaKey");
+		}
+		
 		if(!this.wasOver && isHover){
 			this.trigger("enter");
 		}

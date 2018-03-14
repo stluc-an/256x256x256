@@ -19,6 +19,10 @@ function setup(){
             console.log(event);
         });
     });
+
+    bouton.on("metaKey", function(event){
+        console.log(event);
+    });
 }
 
 function draw(){
@@ -27,7 +31,6 @@ function draw(){
     bouton.update(mouseX, mouseY, mouseIsPressed, mouseButton);
     Animator.update();
 }
-
 
 function triggerSuccess(){
     top.postMessage('SUCCESS', '*');
