@@ -12,6 +12,7 @@
 				width: 256px;
 				height: 256px;
 				border: none;
+				overflow: hidden;
 			}
 			.center{
 				margin: 0 ;
@@ -33,8 +34,15 @@
 				font-size: 20px;
 			}
 			.wrapper{
+				background: black;
 			    box-shadow: rgba(255, 255, 255, 0.3) 0 0 100px 1px;
 			    height: 0px;
+			}
+			.hidden{
+				display : none;
+			}
+			button:focus{
+				outline: 0;
 			}
 		</style>
 		<script src="../libs/Animator.js"></script>
@@ -44,13 +52,17 @@
 	<body>
 		<div class="center">
 			<h2>
-				<p>score : <b class="score">0</b> / 256</p>
+				<p>score : <b class="score">0</b> / <b class="total">0</b></p>
 			</h2>
 			<h1>
 				<b class="title">256x256x256</b>
 			</h1>
 			<h2 class="win">
 				<p>level : <b class="lvl">0xBF</b></p>
+			</h2>
+
+			<h2 class="hidden">
+				 <button onclick="reload()">RELOAD</button> 
 			</h2>
 		</div>
 		<div class="center wrapper">

@@ -1,73 +1,54 @@
-
-/*-----------------------------------------*\
-    BESOIN : 
-    attraper l'événement mouseHover
-\*-----------------------------------------*/
-var bouton;
-
-function colorChange(event){
-    var target = event.target;
-    return new Animator(
-        500, 
-        function(percent){
-            target.color = lerpColor(this.C, this._C, pow(percent, 5) );
-        }, 
-        function(){
-            this.C = target.color;
-            this._C = color(random(255), random(255), random(255));
-        }, 
-        function(){
-            setTimeout(function(){
-                triggerSuccess();
-            }, 300);
-            
-        }
-    ).start();
-}
-
-function blub(event){
-    var target = event.target;
-    return new Animator(
-        2000, 
-        function(percent){
-            target.d = this.D  + 10 * cos(pow(percent, 0.256) * 5 * PI);
-        }, 
-        function(){
-            this.D = target.d;
-        },
-        function(){
-            target.d = this.D;
-        }
-    ).start();
-}
+var firstAction = "onClick";
+var secondAction = "onClick";
+var lastActionOne = "none";
+var lastActionTwo = "none";
+var successStage=0 
+var first;
+var hasReset=false;
 
 
-function setup(){
+function setup () {
     createCanvas(256, 256); 
+    angleMode(DEGREES);
     rectMode(CENTER);
     ellipseMode(CENTER);
     noStroke();
+    first= new First();
+}
 
-    bouton = new Circle(width/2, height/2, 100);
+
+function draw () {
+    actionOne = "onEnter"//document.getElementById("selectorOne").value;
+    actionTwo = "onPressed"//document.getElementById("selectorTwo").value;
+    if(actionOne != lastActionOne || actionTwo != lastActionTwo){
+        successStage=0;
+        first.reset();
+        hasReset=false;
+    }
     
-    bouton.on("enter", function(event){
-        blub(event);
-        bouton.on("pressed", function(event){
-            colorChange(event);
-        });
-    });
-}
+    if(successStage===0){
+        first.do(actionOne);
+    }
+    
+    else if(successStage===1){
+        if(!hasReset){first.reset(); hasReset=true;}
+        first.do(actionTwo);
+    }
+    if(successStage===2){
+        background(0);
+        push()
+        textSize(30);
+        textAlign(CENTER);
+        fill(235);
+        text("Victoire!", width/2, height/2);
+        triggerSuccess();   
+    }
 
-function draw(){
-    background(0);
-    bouton.draw();
-    bouton.update(mouseX, mouseY, mouseIsPressed, mouseButton);
-    Animator.update();
+    lastActionOne = actionOne;
+    lastActionTwo = actionTwo;
 }
-
 
 function triggerSuccess(){
     top.postMessage('SUCCESS', '*');
 }
-
 

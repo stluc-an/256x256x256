@@ -2,19 +2,38 @@
   256x256x256 - script.js
   @author Evrard Vincent (vincent@ogre.be)
   @Date:   2018-02-27 12:27:03
-  @Last Modified time: 2018-03-08 19:00:30
+  @Last Modified time: 2018-03-22 12:38:18
 \*----------------------------------------*/
 //let availableLVL = (new Array(256)).fill().map((p, k)=>{k = k.toString(16);while(k.length<2) k = "0"+k;return "0x"+k});
-let availableLVL = ["0x19", "0xB1", "0xB2"];
+let availableLVL = [
+	"0x0b", "0x0D",
+	"0x10", "0x11", "0x17", "0x18", "0x19", "0x1B", "0x1D", 
+	"0x20", "0x22", "0x24", "0x26", "0x28", "0x29", "0x2a", 
+	"0x32", "0x34", "0x35", "0x38", "0x39", "0x3b", "0x3d", 
+	"0x43", "0x47", "0x4f", 
+	"0x50", "0x51", "0x56", "0x58", "0x59", "0x5a", "0x5E", 
+	"0x62", "0x63", "0x67", "0x68", "0x69", "0x6b", "0x6d", "0x6F", 
+	"0x71", "0x76", "0x77", "0x7c", "0x7d", "0x7E", 
+	"0x87", "0x89", 
+	"0x90", "0x99", "0x9B", "0x9e", 
+	"0xA0", "0xA2", "0xa7", "0xAB", "0xac", "0xAD", 
+	"0xb0", "0xb1", "0xB2", "0xB4", "0xB6", "0xB8", "0xBE",
+	"0xc1", "0xc7", "0xCE", "0xcf", 
+	"0xd1", "0xd2", "0xd3", "0xd5", "0xDE", 
+	"0xe0", "0xe3", "0xE5", "0xEA", "0xec",  "0xef", 
+	"0xf4", "0xf6", "0xf8", "0xFA", "0xFE"
+	];
 let historyLVL = [];
 let failTimeout ;
 let failAfter = 14000;
 let scoreDom;
+let totalDom;
 let winDom;
+let reloadDom;
 let iframeDom;
 let iframeWrapperDom;
 let lvlDom;
-
+let flagNext = false;
 document.addEventListener("DOMContentLoaded", setup);
 window.onmessage = onMessageFromLVL;
 
@@ -22,15 +41,22 @@ function setup(){
 	lvlDom = document.getElementsByClassName("lvl")[0];
 	winDom = document.getElementsByClassName("win")[0];
 	scoreDom = document.getElementsByClassName("score")[0];
+	totalDom = document.getElementsByClassName("total")[0];
 	iframeDom = document.getElementsByTagName("IFRAME")[0];
+	reloadDom = document.getElementsByClassName("hidden")[0];
 	iframeWrapperDom = document.getElementsByClassName("wrapper")[0];
 	iframeDom.onload = onLevelLoaded;
+	totalDom.innerText = availableLVL.length;
 	requestAnimationFrame(runAnimator);
 	nextLVL();
 }
+function reload(){
+	location.reload();
+}
 
 function onMessageFromLVL (e){
-	if(e.data == "SUCCESS"){
+	if(e.data == "SUCCESS" && flagNext){
+		flagNext = false;
 		clearTimeout(failTimeout);
 		nextLVL();
 	}
@@ -44,6 +70,7 @@ function gameOver(success){
 			win(winDom);
 		}
 	}else{
+		reloadDom.classList.remove("hidden");
 		winDom.innerText = "YOU LOOSE";	
 		anim = function(){
 			loose(winDom);
@@ -67,6 +94,7 @@ function nextLVL(){
 }
 
 function prevLVL(){
+	flagNext = false;
 	let lvl = getLastLVL();
 	if(isGameOver(lvl)){
 		setScore2Display();
@@ -86,7 +114,8 @@ function runAnimator(){
 }
 
 function onLevelLoaded(){
-	if(iframeDom.src){
+	if(iframeDom.src && !flagNext){
+		flagNext = true;
 		setTimeout(function(){
 			Open(function(){
 				clearTimeout(failTimeout);
@@ -126,5 +155,6 @@ function setScore2Display(){
 }
 
 function setLevel(lvl){
+	console.log(lvl);
 	iframeDom.src = "../"+lvl+"/index.html";
 }
