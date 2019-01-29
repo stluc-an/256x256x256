@@ -1,0 +1,42 @@
+body, html {
+	font-family: sans-serif;
+	padding: 0; 
+	margin: 0;
+	background: black;
+} 
+iframe {
+	width: 256px;
+	height: 256px;
+	border: none;
+	overflow: hidden;
+}
+.center{
+	margin: 0 ;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	text-align: center;
+}
+h1, h2, p{
+	color: white;
+	margin :0;
+}
+h1{
+	font-size: 40px;
+}
+h2{
+	font-size: 20px;
+}
+.wrapper{
+	background: black;
+    box-shadow: rgba(255, 255, 255, 0.3) 0 0 100px 1px;
+    height: 0px;
+}
+.hidden{
+	display : none;
+}
+button:focus{
+	outline: 0;
+}
