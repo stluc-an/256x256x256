@@ -3,15 +3,15 @@
 E  S  A     ·     A  N  1  ·    ·    ·  0  1  /  0  2  /  1  9     ·     0  8  /  0  3  /  1  9 
 
 ### INDEX :    
-* [OBJECTIFS](#OBJECTIFS)
-* [CONTRAINTES ](#CONTRAINTES)
-* [EN CLASSE](#EN%20CLASSE)
-* [CHEZ VOUS](#CHEZ%20VOUS)
-* [DESCRIPTION](#DESCRIPTION)
-* [RÈGLES](#RÈGLES)
-* [NOMENCLATURE](#NOMENCLATURE)
-* [ATTRIBUTIONS](#ATTRIBUTIONS)
-* [LIEN VERS L'APP](#LIEN%20VERS%20L'APP)
+* [OBJECTIFS](#objectifs-)
+* [CONTRAINTES ](#contraintes-)
+* [EN CLASSE](#en-classe-)
+* [CHEZ VOUS](#chez-vous-)
+* [DESCRIPTION](#description)
+* [RÈGLES](#règles)
+* [NOMENCLATURE](#nomenclature-)
+* [ATTRIBUTIONS](#attribution-)
+* [LIEN VERS L'APP](#lien-vers-lapp)
 
 ### OBJECTIFS :    
 * Produire à 26, 256 espaces interactifs dont la dimension est fixée à 256 pixels sur 256 pixels.
@@ -116,5 +116,5 @@ La colonne Acronyme vous iditifie, elle contient des trigrammes composés au moy
 | **JVE** | [`0x4D`](./src/0x4D) [`0x26`](./src/0x26) [`0x69`](./src/0x69) [`0xFB`](./src/0xFB) [`0x81`](./src/0x81) [`0x34`](./src/0x34) [`0x80`](./src/0x80) [`0xB9`](./src/0xB9) [`0x37`](./src/0x37) [`0x1D`](./src/0x1D) |
 | **FVU** | [`0x1B`](./src/0x1B) [`0xF1`](./src/0xF1) [`0x48`](./src/0x48) [`0x0F`](./src/0x0F) [`0xA5`](./src/0xA5) [`0xE6`](./src/0xE6) [`0xAD`](./src/0xAD) [`0x1F`](./src/0x1F) [`0x93`](./src/0x93) [`0xD4`](./src/0xD4) |
 
-### LIEN VERS L'APP
+### LIEN VERS L'APP :
 [dat://494cdf7ec87d2542ac01bcc4fd39a3efcfd9d139badc96b911794bd6b1e8ad27/src/0xFFF/](dat://494cdf7ec87d2542ac01bcc4fd39a3efcfd9d139badc96b911794bd6b1e8ad27/src/0xFFF/)
