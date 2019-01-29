@@ -20,6 +20,7 @@ E  S  A     ·     A  N  1  ·    ·    ·  0  1  /  0  2  /  1  9     ·     0 
 * Réflexion sur le design «call to action» clair, 
     * Rapide à comprendre
     * Efficace
+* **Nous exposons ce projet commun produit de nos individualités aux portes ouvertes de l’école**.
 
 ### CONTRAINTES : 
 * **Techno :** WEB > HTML + CSS + Javascript
@@ -38,8 +39,7 @@ E  S  A     ·     A  N  1  ·    ·    ·  0  1  /  0  2  /  1  9     ·     0 
 * Nous mettons en place un canvas de développement de vos espaces interactifs.
 * Nous répondons aux questions relatives à votre production.
 * Nous discutons de la pertinence de votre production.
-* Nous mettons en place un dispositif capable de parcourir ces espaces interactifs. 
-* **Nous exposons ce projet commun produit de nos individualités aux portes ouvertes de l’école**.
+* Nous mettons en place un dispositif capable de parcourir ces espaces interactifs.
 
 ### CHEZ VOUS :   
 * Vous conceptualisez vos 10 espaces interactifs
