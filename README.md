@@ -8,8 +8,8 @@ E  S  A     ·     A  N  1  ·    ·    ·  0  1  /  0  2  /  1  9     ·     0 
 * Développer nos compréhensions du potentiel de l'environnement web.
 * Collaborer et s'identifier par rapport aux autres, en créant des espaces différents dans un but commun avec une structure commune.
 * Réflexion sur le design «call to action» clair, 
-.. Rapide à comprendre
-.. Efficace
+    * Rapide à comprendre
+    * Efficace
 
 ### CONTRAINTES : 
 * **Techno :** WEB > HTML + CSS + Javascript
@@ -22,9 +22,9 @@ E  S  A     ·     A  N  1  ·    ·    ·  0  1  /  0  2  /  1  9     ·     0 
 
 ### EN CLASSE :   
 * Nous explorons chacune de ces interactions :
-.. Définition
-.. Technique
-.. Utilisation
+    * Définition
+    * Technique
+    * Utilisation
 * Nous mettons en place un canvas de développement de vos espaces interactifs.
 * Nous répondons aux questions relatives à votre production.
 * Nous discutons de la pertinence de votre production.
@@ -64,16 +64,17 @@ E  S  A     ·     A  N  1  ·    ·    ·  0  1  /  0  2  /  1  9     ·     0 
 * Si l'utilisateur ne parvient pas à résoudre cet espace en moins de 14 secondes, alors **la Mécanique temporelle referme cet espace et ouvre l'espace précédent.** 
 
 ### NOMENCLATURE : 
-Chaque espace est nomé suivant la règle suivante : 
+Chaque espace est nomé suivant la règle suivante : <br/>
 "0x"+`Id_Action_1`+`Id_Action_2`
-> _exemple :_ 
-> ... la première action à acomplir est `SWIPE` qui à pour Id **8**
-> ... la seconde action à acomplir est `TILT` qui à pour Id **A**
+> _exemple :_ <br/>
+> ... la première action à acomplir est `SWIPE` qui à pour Id **8**<br/>
+> ... la seconde action à acomplir est `TILT` qui à pour Id **A**<br/>
 > ... cet espace porte le nom **0x8A**
 
 ### ATTRIBUTIONS :
 La colonne Acronyme vous iditifie, elle contient des trigrammes composés au moyen de vos prénoms et noms. La première lettre du prénom suivit des 2 premières lettres du nom de famille. Pour les noms composés, on prend la première lettre de chaque partonyme jusqu'à composition du trigramme.
-_exemple_ : Vincent Evrard - **VEV**
+> _exemple :_ <br/>
+> ... Vincent Evrard - **VEV**
 
 |  Trigramme | Espaces à votre charge   |
 |:---------- |:------------------------ |
