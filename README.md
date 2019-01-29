@@ -2,16 +2,15 @@
 ## ::: B  R  I  E  F  I  N  G ::: 256  x   256   x  256
 E  S  A     ·     A  N  1  ·    ·    ·  0  1  /  0  2  /  1  9     ·     0  8  /  0  3  /  1  9 
 
-### INDEX :    
-* [OBJECTIFS](#objectifs-)
-* [CONTRAINTES ](#contraintes-)
-* [EN CLASSE](#en-classe-)
-* [CHEZ VOUS](#chez-vous-)
-* [DESCRIPTION](#description)
-* [RÈGLES](#règles)
-* [NOMENCLATURE](#nomenclature-)
-* [ATTRIBUTIONS](#attribution-)
-* [LIEN VERS L'APP](#lien-vers-lapp)
+* [Objectifs](#objectifs-)
+* [Contraintes ](#contraintes-)
+* [En classe](#en-classe-)
+* [Chez vous](#chez-vous-)
+* [Description](#description-)
+* [Règles](#règles-)
+* [Nomenclature](#nomenclature-)
+* [attributions](#attributions-)
+* [Lien vers l'app](#lien-vers-lapp-)
 
 ### OBJECTIFS :    
 * Produire à 26, 256 espaces interactifs dont la dimension est fixée à 256 pixels sur 256 pixels.
