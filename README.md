@@ -89,6 +89,8 @@ La colonne Acronyme vous iditifie, elle contient des trigrammes composés au moy
 |  Trigramme | Espaces à votre charge   |
 |:---------- |:------------------------ |
 | **GAN** |  [`0x03`](./src/0x03) [`0xD1`](./src/0xD1) [`0xEC`](./src/0xEC) [`0xC6`](./src/0xC6) [`0x9E`](./src/0x9E) [`0x16`](./src/0x16) [`0xB5`](./src/0xB5) [`0xA4`](./src/0xA4) [`0xEA`](./src/0xEA) [`0xFD`](./src/0xFD) |
+|         |   [![0x03](https://img.shields.io/website-up-down-green-red/http/github.com/oogre/256x256x256/blob/master/src/0x5A.svg)](https://github.com/oogre/256x256x256/blob/master/src/0x5A/)
+    |
 | **EBE** | [`0xCE`](./src/0xCE) [`0xE1`](./src/0xE1) [`0xBF`](./src/0xBF) [`0x25`](./src/0x25) [`0x18`](./src/0x18) [`0xE0`](./src/0xE0) [`0xDB`](./src/0xDB) [`0x94`](./src/0x94) [`0xEB`](./src/0xEB) [`0xE7`](./src/0xE7) |
 | **KBL** | [`0x85`](./src/0x85) [`0x43`](./src/0x43) [`0x7F`](./src/0x7F) [`0x5F`](./src/0x5F) [`0xB7`](./src/0xB7) [`0x2D`](./src/0x2D) [`0xB0`](./src/0xB0) [`0x98`](./src/0x98) [`0x90`](./src/0x90) [`0x4C`](./src/0x4C) |
 | **CCO** | [`0x02`](./src/0x02) [`0x96`](./src/0x96) [`0xAE`](./src/0xAE) [`0x3F`](./src/0x3F) [`0x84`](./src/0x84) [`0x2C`](./src/0x2C) [`0x65`](./src/0x65) [`0xAB`](./src/0xAB) [`0xBE`](./src/0xBE) [`0xDC`](./src/0xDC) |
@@ -117,3 +119,8 @@ La colonne Acronyme vous iditifie, elle contient des trigrammes composés au moy
 
 ### LIEN VERS L'APP :
 [dat://494cdf7ec87d2542ac01bcc4fd39a3efcfd9d139badc96b911794bd6b1e8ad27/src/0xFFF/](dat://494cdf7ec87d2542ac01bcc4fd39a3efcfd9d139badc96b911794bd6b1e8ad27/src/0xFFF/)
+
+### LICENCE : 
+[![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
+
+
