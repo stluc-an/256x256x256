@@ -2,6 +2,17 @@
 ## ::: B  R  I  E  F  I  N  G ::: 256  x   256   x  256
 E  S  A     ·     A  N  1  ·    ·    ·  0  1  /  0  2  /  1  9     ·     0  8  /  0  3  /  1  9 
 
+### INDEX :    
+* [OBJECTIFS](#OBJECTIFS)
+* [CONTRAINTES ](#CONTRAINTES)
+* [EN CLASSE](#EN%20CLASSE)
+* [CHEZ VOUS](#CHEZ%20VOUS)
+* [DESCRIPTION](#DESCRIPTION)
+* [RÈGLES](#RÈGLES)
+* [NOMENCLATURE](#NOMENCLATURE)
+* [ATTRIBUTIONS](#ATTRIBUTIONS)
+* [LIEN VERS L'APP](#LIEN%20VERS%20L'APP)
+
 ### OBJECTIFS :    
 * Produire à 26, 256 espaces interactifs dont la dimension est fixée à 256 pixels sur 256 pixels.
 * Explorer le potentiel de 16 interactions avec un écran mobile.
