@@ -9,7 +9,7 @@ E  S  A     ·     A  N  1  ·    ·    ·  0  1  /  0  2  /  1  9     ·     0 
 * [Description](#description-)
 * [Règles](#règles-)
 * [Nomenclature](#nomenclature-)
-* [attributions](#attributions-)
+* [Attributions](#attributions-)
 * [Lien vers l'app](#lien-vers-lapp-)
 
 ### OBJECTIFS :    
@@ -17,7 +17,8 @@ E  S  A     ·     A  N  1  ·    ·    ·  0  1  /  0  2  /  1  9     ·     0 
 * Explorer le potentiel de 16 interactions avec un écran mobile.
 * Développer nos compréhensions du potentiel de l'environnement web.
 * Collaborer et s'identifier par rapport aux autres, en créant des espaces différents dans un but commun avec une structure commune.
-* Réflexion sur le design «call to action» clair, 
+* Réflexion sur le design «call to action» 
+    * Clair 
     * Rapide à comprendre
     * Efficace
 * **Nous exposons ce projet commun produit de nos individualités aux portes ouvertes de l’école**.
@@ -32,7 +33,7 @@ E  S  A     ·     A  N  1  ·    ·    ·  0  1  /  0  2  /  1  9     ·     0 
 <img src="./public/images/interactions.jpg" alt="alt text" height="500">
 
 ### EN CLASSE :   
-* Nous explorons chacune de ces interactions :
+* Nous explorons chacune des 16 interactions :
     * Définition
     * Technique
     * Utilisation
@@ -82,7 +83,7 @@ Chaque espace est nomé suivant la règle suivante : <br/>
 > ... cet espace porte le nom **0x8A**
 
 ### ATTRIBUTIONS :
-La colonne Acronyme vous iditifie, elle contient des trigrammes composés au moyen de vos prénoms et noms. La première lettre du prénom suivit des 2 premières lettres du nom de famille. Pour les noms composés, on prend la première lettre de chaque partonyme jusqu'à composition du trigramme.
+La colonne Acronyme vous identifie, elle contient des trigrammes composés au moyen de vos prénoms et noms. La première lettre du prénom suivie des 2 premières lettres du nom de famille. Pour les noms composés, on prend la première lettre de chaque patronyme jusqu'à composition du trigramme.
 > _exemple :_ <br/>
 > ... Vincent Evrard - **VEV**
 
