@@ -7,16 +7,27 @@ html{
 body {
 	padding: 0; 
 	margin: 0;
-	background: black;
+	background: white;
 	width : 256px;
 	height : 256px;
 	overflow: hidden;
 } 
-
+.hide{
+	display: none;
+}
+img{
+	height: 256px;
+    transform: rotate(0deg);
+}
 h1{
-	color:#fff;
+	color: lime;
+	width: 100%;
+	text-align: center;
+	transform: translate(0px, 114px);
+	margin: 0;
+	padding: 0;
 }
 
-.green{
-	background: lightgreen;
-}
+
+
+

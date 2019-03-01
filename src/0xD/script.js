@@ -2,32 +2,44 @@
   256x256x256 - script.js
   @author Evrard Vincent (vincent@ogre.be)
   @Date:   2018-02-27 12:27:03
-  @Last Modified time: 2019-02-21 18:29:29
+  @Last Modified time: 2019-03-01 09:59:39
 \*----------------------------------------*/
 document.addEventListener("DOMContentLoaded", setup);
+var angle = 0;
 
-var timer;
-var counter = 3;
-
-function timeoutHandler(){
-	top.postMessage('SUCCESS', '*');
-	document.body.style.backgroundColor = "red";
-}
+var chronoTimeout;
 
 function setup(){
-	document.body.onmousedown = document.body.onmousemove = reset;
-	reset();
-	setInterval(countdown, 1000);
+	///setInterval(animate, 42);
+	requestAnimationFrame(animate);
+
+	// démarrer le chrono de 3sec
+	chronoTimeout = setTimeout(timeoutHandler, 3000);
+	
+	window.onmousedown = function(){
+		clearTimeout(chronoTimeout);
+		chronoTimeout = setTimeout(timeoutHandler, 3000);
+	}
 }
 
-function countdown(){
-	counter -= 1;
-	document.querySelector("h1").innerText = parseFloat(counter);
+function timeoutHandler(){
+	var img = document.querySelector("img");
+	img.classList.add("hide");
+	var h1 = document.querySelector("h1");
+	h1.classList.remove("hide");
 }
 
-function reset(){
-	counter = 3;
-	document.querySelector("h1").innerText = parseFloat(counter);
-	clearTimeout(timer);
-	timer = setTimeout(timeoutHandler, 3000);
+
+function animate(){
+	angle += -10;
+	var img = document.querySelector("img");
+	img.style.transform = "rotate(" + angle + "deg)";
+	requestAnimationFrame(animate);
 }
+
+
+
+
+
+
+
