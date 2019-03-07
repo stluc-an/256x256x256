@@ -2,14 +2,14 @@
   256x256x256 - script.js
   @author Evrard Vincent (vincent@ogre.be)
   @Date:   2018-02-27 12:27:03
-  @Last Modified time: 2019-03-07 10:43:25
+  @Last Modified time: 2019-03-07 10:47:30
 \*----------------------------------------*/
 //http://qnimate.com/detect-shake-using-javascript/
 document.addEventListener("DOMContentLoaded", setup);
 
 function swipeHandler(){
 	top.postMessage('SUCCESS', '*');
-	console.log("swipeHandler!");
+	console.log("swipeHandler...");
 }
 
 
