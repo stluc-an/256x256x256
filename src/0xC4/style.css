@@ -1,0 +1,32 @@
+html{
+	padding: 0; 
+	margin: 0;
+	overflow: hidden;
+	background: white;
+}
+body {
+	padding: 0; 
+	margin: 0;
+	background: black;
+	width : 256px;
+	height : 256px;
+	overflow: hidden;
+} 
+.red{
+	background-color: red;
+}
+
+#grid-snap {
+  width: 40%;
+  background-color: #4F33FF;
+  color: #fff;
+  font-size: 1.2em;
+  border-radius: 4px;
+  padding: 2%;
+  margin: 5%;
+  touch-action: none;
+}
+
+
+
+

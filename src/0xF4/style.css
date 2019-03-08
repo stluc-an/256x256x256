@@ -1,0 +1,27 @@
+html{
+	padding: 0; 
+	margin: 0;
+	overflow: hidden;
+	background: white;
+}
+body {
+	padding: 0; 
+	margin: 0;
+	background: #80011E;
+	width : 256px;
+	height : 256px;
+	overflow: hidden;
+} 
+.black{
+	background-color: black;
+}
+
+.trigger{
+	width: 100px;
+	height: 100px;
+	image:url(Paralysie du sommeil_bouton.png);
+}
+
+.target{
+	color:#4F33FF;
+}
