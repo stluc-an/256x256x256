@@ -1,0 +1,44 @@
+html{
+	padding: 0; 
+	margin: 0;
+	overflow: hidden;
+	background: white;
+}
+
+body {
+	padding: 0; 
+	margin: 0;
+	background: orange;
+	width : 256px;
+	height : 256px;
+	overflow: hidden;
+} 
+#menu img{
+	width:160px;
+	height:240px;
+	position:relative;
+	top:10px;
+}
+#menuInside img{
+	width: 180px;
+    height: 256px;
+    position: relative;
+}
+.hide{
+	display: none;
+}
+#entree{
+	position: relative;
+	bottom: 210px;
+	right:0px;
+}
+#plats{
+	position: relative;
+	bottom: 140px;
+	right:90px;
+}
+#dessert{
+	position: relative;
+	bottom: 105px;
+	right:20px;
+}
