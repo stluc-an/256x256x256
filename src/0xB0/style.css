@@ -1,0 +1,25 @@
+html{
+	padding: 0; 
+	margin: 0;
+	overflow: hidden;
+	background: white;
+}
+body {
+	padding: 0; 
+	margin: 0;
+	background: black;
+	width : 256px;
+	height : 256px;
+	overflow: hidden;
+} 
+
+h1 {
+	font-family: sans-serif;
+	text-align: center;
+	margin-top: 40%;
+	color: white;
+}
+
+.hide{
+	display:none;
+}
