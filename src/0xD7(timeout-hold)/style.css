@@ -1,0 +1,29 @@
+#text{width: 256px;
+height: 256px;
+opacity: 1;
+font-size: 50px;
+position: absolute;
+z-index: 1;}
+
+
+html{
+	padding: 0; 
+	margin: 0;
+	overflow: hidden;
+	background: white;
+}
+body {
+	padding: 0; 
+	margin: 0;
+	background: white;
+	width : 256px;
+	height : 256px;
+    overflow: hidden;}
+
+.trigger{
+    position: absolute;
+    height: 256px;
+    width: 256px;
+ z-index: 0;
+   
+}
