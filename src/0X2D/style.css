@@ -1,0 +1,35 @@
+#drag-1, #drag-2 {
+  width: 30%;
+  height: 22%;
+ 
+  margin: 30%;
+  background-color: #574e4e;
+  color: white;
+  border-radius: 0.25em;
+  
+  user-select: none;
+  -webkit-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+    
+}
+
+html{
+	padding: 0; 
+	margin: 0;
+	overflow: hidden;
+	background: white;
+}
+body {
+	padding: 0; 
+	margin: 0;
+	background: black;
+	width : 256px;
+	height : 256px;
+	overflow: hidden;
+}
+
+p{
+    text-align: center;
+    
+    
+}
