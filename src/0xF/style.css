@@ -12,10 +12,7 @@ body {
 	height : 256px;
 	overflow: hidden;
 } 
+
 .red{
-	background-color: red;
+	background-color: red; 
 }
-
-
-
-

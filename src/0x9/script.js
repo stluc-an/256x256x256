@@ -32,3 +32,4 @@ function stopShake(){
 function shakeHandler(){
     alert("Shaked");
 }
+
