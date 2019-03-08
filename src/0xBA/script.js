@@ -7,55 +7,25 @@
 document.addEventListener("DOMContentLoaded", setup);
 
 function setup(){
-	var img = document.querySelector("img");
-	img.classList.add("hidden");
-	window.onfocus = weAreFocus;
-	if (!window.DeviceOrientationEvent) {
-		return alert("NO DeviceOrientationEvent");
-	}
-
-	window.ondeviceorientation =  function(event) {
-		// alpha: rotation around z-axis
-		var rotateDegrees = ((event.alpha/360) + 1) % 1;
-		// gamma: left to right
-		var leftToRight = ((event.gamma/360) + 1) % 1;
-		// beta: front back motion
-		var frontToBack = ((event.beta/360) + 1) % 1;
-
-		drawProgress(frontToBack, document.querySelector(".x circle"));
-		
-	};
+	var trigger1 = interact(".trigger1");
+	trigger1.on("tap", step1);
 }
 
-function final(){
-top.postMessage('SUCCESS', '*');
-	
+function step1(event){
+	var btnToHide = document.querySelector(".trigger1");
+	btnToHide.classList.add("hidden");
+
+	var btnToShow = document.querySelector(".trigger2");
+	btnToShow.classList.remove("hidden");
+
+	var trigger2 = interact(".trigger2");
+	trigger2.on("tap", tapHandler);
 }
 
-function weAreFocus (event){
-	document.body.classList.add("red");
-	var img = document.querySelector("img");
-	img.classList.remove("hidden");
-}
+function tapHandler (event){
+	var btnToHide = document.querySelector(".trigger2");
+	btnToHide.classList.add("hidden");
 
-function resizedHandler(){
 	top.postMessage('SUCCESS', '*');
-	console.log("resizedHandler");
+	console.log("tapHandler");
 }
-
-
-function drawProgress(ratio, target){
-	var twoPi =  Math.PI * 2;
-	var halfPi =  Math.PI * 0.5;
-	var width = 65;
-	var angle = ratio * twoPi;
-	var radius = width * 0.5 - 5;
-	var offset = width * 0.5;
-
-	var x = offset + radius * Math.cos(angle-halfPi);
-	var y = offset + radius * Math.sin(angle-halfPi);
-	
-	target.setAttribute("cx", x)
-	target.setAttribute("cy", y)
-}
-
