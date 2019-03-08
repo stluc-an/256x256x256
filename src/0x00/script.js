@@ -6,6 +6,7 @@
 \*----------------------------------------*/
 document.addEventListener("DOMContentLoaded", setup);
 
+
 function tapHandler (event){
 	top.postMessage('SUCCESS', '*');
 	console.log("tapHandler");
