@@ -1,0 +1,33 @@
+html{
+	padding: 0; 
+	margin: 0;
+	overflow: hidden;
+	background: white;
+}
+body {
+	padding: 0; 
+	margin: 0;
+	background: white;
+	width : 256px;
+	height : 256px;
+	overflow: hidden;
+} 
+
+h1{
+	color: black;
+	width: 100%;
+	height: 100%;
+	text-align: rotate(0deg);
+	transform: translate(0px, 114px);
+	margin: 0;
+	padding: 0;
+}
+
+img{
+	height: 256px;
+	transform: rotate(0deg);
+}
+
+.hide{
+	display: none;
+}
