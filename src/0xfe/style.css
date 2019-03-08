@@ -1,0 +1,27 @@
+html{
+	padding: 0; 
+	margin: 0;
+	overflow: hidden;
+	background: white;
+}
+
+body {
+	padding: 0; 
+	margin: 0;
+	background: black;
+	width : 256px;
+	height : 256px;
+	overflow: hidden;
+} 
+
+.red{
+	background-color: red;
+}
+
+h1{
+	color: lightgrey;
+}
+
+p{
+	color: white;
+}
