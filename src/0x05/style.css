@@ -1,0 +1,47 @@
+html{
+	padding: 0; 
+	margin: 0;
+	overflow: hidden;
+	background: white;
+}
+body {
+	padding: 0; 
+	margin: 0;
+	background: black;
+	width : 256px;
+	height : 256px;
+	overflow: hidden;
+} 
+
+.tap-target {
+  
+  width: 50%;
+  height: 500%;
+  padding: 10%;
+  margin: 10% auto;
+
+  border-radius: 100%;
+
+
+
+  font-size: 1.125em;
+  text-align: center;
+  color: #fff;
+  background-color: #29e;
+
+  cursor: pointer;
+  touch-action: none;
+
+  transition: all 0.5s;
+}
+
+.tap-target.switch-bg {
+  background-color: #A233FF;
+}
+
+
+.rotate {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+
+}
