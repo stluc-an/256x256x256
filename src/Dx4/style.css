@@ -1,0 +1,34 @@
+html{
+	padding: 0; 
+	margin: 0;
+	overflow: hidden;
+	background: white;
+}
+body {
+	padding: 0; 
+	margin: 0;
+	background: white;
+	width : 256px;
+	height : 256px;
+	overflow: hidden;
+} 
+.hidden{
+	display: none;
+}
+
+#test1{
+	height: 50%;
+
+}
+img{height: 256px;
+   
+}
+
+h1{
+	color: lime;
+	transform: translate(0px, 128px);
+	width:100%;
+	text-align: CENTER;
+	margin: 0;
+	padding: 0;
+}

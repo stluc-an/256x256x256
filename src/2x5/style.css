@@ -1,0 +1,45 @@
+html{
+	padding: 0; 
+	margin: 0;
+	overflow: hidden;
+	background: white;
+}
+body {
+	padding: 0; 
+	margin: 0;
+	width : 256px;
+	height : 256px;
+	overflow: hidden;
+}
+.dropzone{
+	position: absolute;
+	top: 100px;
+	left: 100px;
+	width: 50px;
+	height: 50px;
+	border: none;
+}
+
+#rotate-area{
+	width: 20%;
+	height: 20%;
+}
+.trigger{
+	width: 20%;
+	height: 20%;
+	
+ 
+}
+
+#toRot{
+	touch-action: none;	
+	overflow: hidden;
+	transform: rotate(20deg);
+}
+.smile{
+	background-image: url(./../../public/images/smile.png);
+	width: 1020%;
+	height: 100%;
+	background-repeat: no-repeat;
+	top:50px;
+}
