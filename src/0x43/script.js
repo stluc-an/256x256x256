@@ -7,6 +7,11 @@
 document.addEventListener("DOMContentLoaded", setup);
 
 function setup(){
+	resizer();
+	
+}
+
+function resizer(){
 	var trigger = interact('.trigger');
 	trigger.draggable({onmove: dragMoveHandler});
 	interact('.trigger')
@@ -39,8 +44,6 @@ function setup(){
 			resizedHandler();
 		}
 	});
-
-	
 }
 
 function resizedHandler(){
@@ -51,7 +54,7 @@ function resizedHandler(){
 	var trigger = interact('.trigger');
 	trigger.draggable({onmove: dragMoveHandler});
 	interact('.trigger')
-
+	dragMoveHandler();
 	console.log("resizedHandler");
 
 }
@@ -72,11 +75,12 @@ function dragMoveHandler (event){
 	target.setAttribute('data-x', x);
 	target.setAttribute('data-y', y);
 	interact('.trigger')
+		alert("yop");
 	
 }
 
 function dragEndHandler(event){
-	
+top.postMessage("SUCCESS", "*");
 	console.log("dragEndHandler");
 	}
 

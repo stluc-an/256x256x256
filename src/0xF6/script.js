@@ -7,15 +7,51 @@
 document.addEventListener("DOMContentLoaded", setup);
 
 function weAreOnline (event){
+	console.log("weAreOnline");
+	alert("bjr");
 	var img = document.querySelector("img");
 	img.classList.add("hidden");
-	var meme2 = document.querySelector("#meme2");
-	meme2.classList.remove("hidden");
-	top.postMessage('SUCCESS', '*');
-	console.log("weAreOnline");
-}
+	var toPinch = document.querySelector("#toPinch");
+	toPinch.classList.remove("hidden");
+	pinchHandler();
+
+
+	}
+	
 
 function setup(){
 	window.ononline = weAreOnline;
 }
 
+
+function final(){
+	top.postMessage('SUCCESS', '*');
+	alert("j");
+}
+function tapHandler (event){
+console.log("tapHandler");
+}
+
+function pinchHandler(){
+
+	var scale = 1,
+	    gestureArea = document.querySelector('#pinch-area'),
+	    scaleElement = document.querySelector('#toPinch'),
+	    resetTimeout;
+
+	interact(gestureArea)
+	  .gesturable({
+	    onmove: function (event) {
+	      scale = scale * (1 + event.ds);
+	      scaleElement.style.webkitTransform =
+	      scaleElement.style.transform =
+	        'scale(' + scale + ')';
+
+	      
+	    },
+	    onend: function (event) {
+	     final();
+	    }
+	  });
+	  tapHandler();
+}

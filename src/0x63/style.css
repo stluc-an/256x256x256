@@ -26,18 +26,6 @@ body {
  
 }
 
-#toPinch{
-	touch-action: none;	
-	overflow: hidden;
-}
-.rect{
-	width:100px;
-	height:100px;
-}
-.red{
-	background-color: red;
-}
-
 .dropzone{
 	position: absolute;
 	top: 105px;
@@ -46,15 +34,25 @@ body {
 	height: 100px;
 	border: solid 1px beige;
 }
-.spir{
+
+
+#bin{
+		position: absolute;
+	width: 256px;
+	height: 256px;
+}
+#toPinch{
+	touch-action: none;	
+	overflow: hidden;
 	position: absolute;
-	width: 100px;
-	height: 100px;
+	width: 256px;
+	height: 256px;
 }
 
-img{
-	width: 40px;
-	height: 40px;
+#morte{
+	position: absolute;
+	width: 256px;
+	height: 256px;
 }
 .hidden {
 	display: none;

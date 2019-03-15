@@ -7,7 +7,8 @@
 document.addEventListener("DOMContentLoaded", setup);
 
 function setup(){
-	
+	var mouche = document.querySelector("mouche");
+	vivante.classList.remove("hidden");
 	var scale = 1,
 	    gestureArea = document.querySelector('#pinch-area'),
 	    scaleElement = document.querySelector('#toPinch'),
@@ -24,19 +25,21 @@ function setup(){
 	      
 	    },
 	    onend: function (event) {
-	      var img = document.querySelector("vivante");
-	vivante.classList.remove("hidden");
+	      var mouche = document.querySelector("mouche");
+	vivante.classList.add("hidden");
+	var poubelle = document.querySelector("poubelle");
+	bin.classList.remove("hidden");
+	var moucheMorte = document.querySelector("moucheMorte");
+	morte.classList.remove("hidden");
 	    }
 	  });
-
 	
 	var trigger = interact('.trigger');
 	trigger.draggable({onmove: dragMoveHandler});
 }
 
 function tapHandler (event){
-	var img = document.querySelector("img");
-	spir.classList.add("hidden");
+
 	console.log("tapHandler");
 }
 
@@ -53,23 +56,10 @@ function dragMoveHandler (event){
 	target.setAttribute('data-x', x);
 	target.setAttribute('data-y', y);
 	interact('.trigger')
-	chronoTimeout = setTimeout(timeoutHandler,3000);
-	window.onmousedown = function(){
-			clearTimeout(chronoTimeout);
-			chronoTimeout = setTimeout(timeoutHandler,3000);
-		}
-	
+	top.postMessage('SUCCESS', '*');
 }
 
 function dragEndHandler(event){
 	console.log("dragEndHandler");
 	
 	}
-
-
-function timeoutHandler(){
-	var spirale = document.querySelector("spirale");
-	spir.classList.remove("hidden");
-	top.postMessage('SUCCESS', '*');
-}
-

@@ -8,9 +8,8 @@ document.addEventListener("DOMContentLoaded", setup);
 var angle = 0;
 
 function setup(){
-	var vivante = document.querySelector("vivante");
-	vivante.classList.add("hidden");
-	
+	var rotateObj = document.querySelector("rotateObj");
+	toRot.classList.remove("hidden");
 	interact('#rotate-area').gesturable({
 		onmove: function (event) {
 			var arrow = document.querySelector('#toRot');
@@ -25,20 +24,26 @@ function setup(){
 		}
 	});
 
-	interact('.trigger1')
+	interact('.trigger')
 	.on("doubletap", doubleTapHandler)
 }
 
 function rotateHandler(){
 	console.log("resizedHandler");
-	var spirale = document.querySelector("spirale");
-	spir.classList.remove("hidden");
+	doubleTapHandler()
 }
 
 
 
 function doubleTapHandler (event){
-	top.postMessage('SUCCESS', '*');
 	console.log("doubleTapHandler");
+
+	var spirale = document.querySelector("spirale");
+	vol.classList.remove("hidden");
+	var rotateObj = document.querySelector("rotateObj");
+	toRot.classList.add("hidden");
 }
 
+function doubleTapEndHandler (event){
+	top.postMessage('SUCCESS', '*');
+}
