@@ -25,12 +25,11 @@ function setup(){
 
 function final(){
 	top.postMessage('SUCCESS', '*');
-	alert("j");
+	
 }
-function tapHandler (event){
-console.log("tapHandler");
-final();
-}
+
+
+
 
 function pinchHandler(){
 
@@ -50,8 +49,9 @@ function pinchHandler(){
 	      
 	    },
 	    onend: function (event) {
+	    	final();
 	    }
 	  });
-	  alert("oui!");
+	 
 	  tapHandler();
 }

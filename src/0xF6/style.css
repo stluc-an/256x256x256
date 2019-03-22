@@ -25,3 +25,8 @@ body {
 	touch-action: none;	
 	overflow: hidden;
 }
+
+.trigger{
+	width: 256px;
+	height: 256px;
+}
