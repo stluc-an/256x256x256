@@ -1,0 +1,28 @@
+html{
+	padding: 0; 
+	margin: 0;
+	overflow: hidden;
+	background: white;
+}
+body {
+	padding: 0; 
+	margin: 0;
+	width : 256px;
+	height : 256px;
+	overflow: hidden;
+} 
+
+h1{color: red;
+	transform: translate(0px, 0px);
+	position: 
+	width:50%;
+	margin: 0;
+	padding: 0;
+
+}
+.circle{
+	width: 200px;
+	height: 100px; 
+	border-radius: 20%;
+	background-color: blue;
+}
