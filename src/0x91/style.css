@@ -1,4 +1,4 @@
-html{
+ html{
 	padding: 0; 
 	margin: 0;
 	overflow: hidden;
@@ -7,7 +7,7 @@ html{
 body {
 	padding: 0; 
 	margin: 0;
-	background-image: url("../../public/images/0x91shake.png");
+	background: white;
 	width : 256px;
 	height : 256px;
 	overflow: hidden;

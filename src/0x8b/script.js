@@ -10,6 +10,11 @@ document.addEventListener("DOMContentLoaded", setup);
 function resizedHandler(){
 	top.postMessage('SUCCESS', '*');
 	console.log("resizedHandler");
+
+	 var img = document.querySelector("img");
+	img.classList.add("hide");
+	var h1 = document.querySelector("h1");
+	h1.classList.remove("hide");
 }
 
 
