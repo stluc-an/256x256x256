@@ -1,0 +1,61 @@
+html{
+	padding: 0; 
+	margin: 0;
+	overflow: hidden;
+	background: white;
+}
+body {
+	padding: 0; 
+	margin: 0;
+	background-color: orange;
+	width : 256px;
+	height : 256px;
+	overflow: hidden;
+} 
+h1{
+	color: azure;
+}
+.greyRect{
+	width:256px;
+	height:200px;
+	background-color: lightgrey;
+	position: relative;
+	left:0px;
+	top:30px;
+}
+.blackRect{
+	width:200px;
+	height:150px;
+	background-color: grey;
+	position: relative;
+	left:0px;
+    top: 25px;
+}
+.Food{
+	width: 128px;
+}
+.Food img{
+	width: 100%;
+    height: 100%;
+}
+.rect{
+	width:40px;
+	height:100px;
+	background-color: grey;
+	position: relative;
+	top: 24px;
+}
+.hide{
+	display: none;
+}
+input{
+	width: 40px;
+	
+}
+
+.sidebar{
+	position: absolute;
+    left: 205px;
+    top: 25px;
+    height: 150px;
+}

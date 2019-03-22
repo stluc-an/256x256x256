@@ -30,15 +30,15 @@ body {
 #entree{
 	position: relative;
 	bottom: 210px;
-	right:0px;
+	left:55px;
 }
 #plats{
 	position: relative;
 	bottom: 140px;
-	right:90px;
+	right:30px;
 }
 #dessert{
 	position: relative;
-	bottom: 105px;
-	right:20px;
+	bottom: 70px;
+	right:100px;
 }
