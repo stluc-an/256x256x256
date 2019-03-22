@@ -6,9 +6,14 @@
 \*----------------------------------------*/
 document.addEventListener("DOMContentLoaded", setup);
 
-function setup(){
+function pinchHandler(){
+	var trigger = interact('.trigger');
+	trigger.draggable({onmove: dragMoveHandler});
+
+
 	var mouche = document.querySelector("mouche");
 	vivante.classList.remove("hidden");
+
 	var scale = 1,
 	    gestureArea = document.querySelector('#pinch-area'),
 	    scaleElement = document.querySelector('#toPinch'),
@@ -24,27 +29,31 @@ function setup(){
 
 	      
 	    },
-	    onend: function (event) {
-	      var mouche = document.querySelector("mouche");
-	vivante.classList.add("hidden");
-	var poubelle = document.querySelector("poubelle");
-	bin.classList.remove("hidden");
-	var moucheMorte = document.querySelector("moucheMorte");
-	morte.classList.remove("hidden");
+	   onend: function (event) {
+	      
+	dragMoveHandler();
 	    }
 	  });
-	
-	var trigger = interact('.trigger');
-	trigger.draggable({onmove: dragMoveHandler});
+	 
 }
 
-function tapHandler (event){
+function setup(){
+	pinchHandler();
 
-	console.log("tapHandler");
 }
 
 
 function dragMoveHandler (event){
+
+	var dropzone = document.querySelector("#dropzone");
+	dropzone.classList.remove("hidden");
+	var mouche = document.querySelector("mouche");
+	vivante.classList.add("hidden");
+	var poubelle = document.querySelector("#bin");
+	bin.classList.remove("hidden");
+	var moucheMorte = document.querySelector("#morte");
+	morte.classList.remove("hidden");
+
 
 	var target = event.target,
 	// keep the dragged position in the data-x/data-y attributes
@@ -56,10 +65,15 @@ function dragMoveHandler (event){
 	target.setAttribute('data-x', x);
 	target.setAttribute('data-y', y);
 	interact('.trigger')
-	top.postMessage('SUCCESS', '*');
+	
 }
 
-function dragEndHandler(event){
+function dragMoveEndHandler(event){
 	console.log("dragEndHandler");
-	
+	final();
 	}
+
+function final(){
+	alert("ouais!");
+top.postMessage('SUCCESS', '*');
+}

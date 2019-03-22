@@ -74,8 +74,7 @@ function dragMoveHandler (event){
 	// update the posiion attributes
 	target.setAttribute('data-x', x);
 	target.setAttribute('data-y', y);
-	interact('.trigger')
-		;
+	interact('.trigger');
 	
 }
 
