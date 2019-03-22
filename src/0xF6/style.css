@@ -19,13 +19,7 @@ body {
 	width: 100%;
 	height: 100%;
 }
-.trigger{
-	width: 100px;
-	height: 100px;
-	border: solid 5px red;
-	
- 
-}
+
 
 #toPinch{
 	touch-action: none;	

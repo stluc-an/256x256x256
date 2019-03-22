@@ -8,7 +8,6 @@ document.addEventListener("DOMContentLoaded", setup);
 
 function weAreOnline (event){
 	console.log("weAreOnline");
-	alert("bjr");
 	var img = document.querySelector("img");
 	img.classList.add("hidden");
 	var toPinch = document.querySelector("#toPinch");
@@ -30,6 +29,7 @@ function final(){
 }
 function tapHandler (event){
 console.log("tapHandler");
+final();
 }
 
 function pinchHandler(){
@@ -50,8 +50,8 @@ function pinchHandler(){
 	      
 	    },
 	    onend: function (event) {
-	     final();
 	    }
 	  });
+	  alert("oui!");
 	  tapHandler();
 }
