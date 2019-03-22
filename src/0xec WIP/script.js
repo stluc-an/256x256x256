@@ -53,5 +53,5 @@ function getSelectionText() {
 
 function Final(){
     top.postMessage('SUCCESS', '*');
-    alert("hello");
+    alert("Congratulations !");
 }

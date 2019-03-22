@@ -39,3 +39,17 @@ body {
     margin-left: 32px;
 }
 
+#Selector{
+    font-size: 14px;
+    text-align: center;
+}
+
+#Instructions{
+    font-size: 13px;
+    text-align: center;
+}
+
+#h1{
+    color:darkred;
+    text-align: center;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="./style.css">
+	</head>
+    <script>
+        var state = 0;
+        window.open("./YouWon.html")
+        window.onfocus = function(){
+            if(state == 0){
+                window.open("./Focus-Timeout.html")
+                state = 1;
+            }
+            if(state == 1){
+                state = 2;
+                document.body.style.backgroundColor = "red";
+                Final();
+            }
+        }
+      
+        function Final(){
+    top.postMessage('SUCCESS', '*');
+    alert("Congratulations !");
+}
+    </script>
+	<body>
+     <h1 id="H1I">Please allow pop-ups for the following to work</h1>
+     <div id="Redirect1">
+         <a  target="_blank" href="./Focus-Timeout.html">Please click me</a>
+     </div>
+	</body>
+</html>
+
