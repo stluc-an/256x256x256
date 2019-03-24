@@ -1,0 +1,23 @@
+html{
+	padding: 0; 
+	margin: 0;
+	overflow: hidden;
+	background: white;
+}
+body {
+	padding: 0; 
+	margin: 0;
+	background: black;
+	width : 256px;
+	height : 256px;
+	overflow: hidden;
+} 
+
+.dropzone{
+	position: absolute;
+	top: 100px;
+	left: 100px;
+	width: 100px;
+	height: 100px;
+	border: solid 5px red;
+}
