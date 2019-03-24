@@ -1,0 +1,47 @@
+html{
+	padding: 0; 
+	margin: 0;
+	overflow: hidden;
+	background: white;
+}
+body {
+	padding: 0; 
+	margin: 0;
+	background: lightblue;
+	width : 256px;
+	height : 256px;
+	overflow: hidden;
+	/*background-image: url(../../public/images/propgra-appli-2.png);*/
+} 
+
+.red{
+	/*background-color: red;*/
+}
+
+
+.rect{
+	width:215px;
+	height:255px;
+	/*background-image: url(../../public/images/propgra-appli-12.png);*/
+}
+
+
+#rotate-area{
+	width: 100%;
+	height: 100%;
+}
+
+#toRot{
+	touch-action: none;	
+	overflow: hidden;
+	transform: rotate(20deg);
+}
+
+.img{
+	width:256px;
+	height:256px;
+	position: center;
+}
+.hide{
+	display: none;
+}
