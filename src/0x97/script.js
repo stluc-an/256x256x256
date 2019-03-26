@@ -21,7 +21,8 @@ function setup(){
 	var shakeEvent = new Shake({threshold: 5});
 	shakeEvent.start();
 	window.onShake = shakeHandler;
-    
+    interact('.trigger')
+	.on("hold", tapHandler)
 }
 
 //stop listening
@@ -31,4 +32,11 @@ function stopShake(){
 
 function shakeHandler(){
    open("https://www.youtube.com/watch?v=w0AOGeqOnFY");
+}
+
+
+function tapHandler (event){
+	top.postMessage('SUCCESS', '*');
+	console.log("tapHandler");
+	event.target.style.backgroundColor="yellow";
 }

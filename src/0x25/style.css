@@ -23,6 +23,7 @@ body {
 #rotate-area{
 	width: 20%;
 	height: 20%;
+	border: 5px;
 }
 .trigger{
 	width: 20%;
@@ -37,9 +38,9 @@ body {
 	transform: rotate(20deg);
 }
 .smile{
-	background-image: url(./../../public/images/smile.png);
-	width: 1020%;
+	background-image: url(./../../public/images/smileC.png);
+	width: 100%;
 	height: 100%;
 	background-repeat: no-repeat;
-	top:50px;
+
 }
