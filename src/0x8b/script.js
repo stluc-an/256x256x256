@@ -24,10 +24,21 @@ function setup(){
 		 
 		if(e.type == 'swipeup'){}
 
-
-  
 	});
 
 }
+
+
+/*je n'arrive pas à faire se suivre ces 2 actions*/
+
+function weAreFocus (event){
+	document.body.classList.add("red");
+	
+}
+
+function setup(){
+	window.onfocus = weAreFocus;
+}
+
 
  

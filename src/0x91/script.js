@@ -32,9 +32,6 @@ function shakeHandler(){
 	var imgSucces = document.querySelector("img.succes");
 	imgSucces.classList.remove("hide");
 
-	
- 
-
 }
 
 
