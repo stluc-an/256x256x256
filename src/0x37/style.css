@@ -1,0 +1,29 @@
+ html{
+	padding: 0; 
+	margin: 0;
+	overflow: hidden;
+	background: white;
+}
+body {
+	padding: 0; 
+	margin: 0;
+	background-image:url("../../public/images/0x37whole.png"); 
+	width : 256px;
+	height : 256px;
+	overflow: hidden;
+} 
+
+.dropzone{
+	position: absolute;
+	top: 100px;
+	left: 120px;
+	width: 100px;
+	height: 100px;
+	 
+}
+
+ .hide{
+	display: none;
+ 
+}
+

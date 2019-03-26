@@ -1,0 +1,55 @@
+html{
+	padding: 0; 
+	margin: 0;
+	overflow: hidden;
+	background: white;
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	padding: 0; 
+	margin: 0;
+	background: mistyrose;
+	width : 256px;
+	height : 256px;
+	overflow: hidden;
+	background-image: url(../../public/images/propgra-appli-10.png);
+} 
+
+#pinch-area{
+	width: 100%;
+	height: 100%;
+}
+.trigger{
+	width: 100px;
+	height: 100px;
+	border: solid 5px red;
+}
+
+#toPinch{
+	touch-action: none;	
+	overflow: hidden;
+}
+
+.rect{
+	width:135px;
+	height:135px;
+	/*background-image: url(../../public/images/propgra-appli-11.png);*/
+}
+
+.red{
+	background-color: mistyrose;
+}
+
+
+/*.circle{
+	width: 100px;
+	height: 100px;
+	border-radius: 50px;
+}
+
+.blue{
+	background-color: powderblue;
+}*/
+
