@@ -14,7 +14,8 @@ function setup(){
 	var shakeEvent = new Shake({threshold: 5});
 	shakeEvent.start();
 	window.onShake = shakeHandler;
-	
+
+
  
 }
 
@@ -25,15 +26,18 @@ function stopShake(){
 
 function shakeHandler(){
     alert("Shaked");
+
+    	var img = document.querySelector("img");
+	img.classList.add("hide");
+	var imgSucces = document.querySelector("img.succes");
+	imgSucces.classList.remove("hide");
+
+	
  
 
 }
 
 
-var img = document.querySelector("img");
-	img.classList.add("hide");
-	var imgSucces = document.querySelector("img.succes");
-	imgSucces.classList.remove("hide");
 
 function doubleTapHandler (event){
 	top.postMessage('SUCCESS', '*');
