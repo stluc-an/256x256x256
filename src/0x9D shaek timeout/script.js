@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", setup);
 function resizedHandler(){
 	top.postMessage('SUCCESS', '*');
 	console.log("resizedHandler");
+    alert("c' est bon :)");
 }
 
 function setup(){
@@ -30,5 +31,8 @@ function stopShake(){
 }
 
 function shakeHandler(){
-    alert("OKOK , stop , be patient!");
-}
+  alert("OKOK , stop , be patient!");
+      document.getElementById("image").style.opacity = "1";
+setTimeout(resizedHandler, 3000);}
+   
+ 
