@@ -53,8 +53,7 @@ function dragMoveHandler (event){
 	bin.classList.remove("hidden");
 	var moucheMorte = document.querySelector("#morte");
 	morte.classList.remove("hidden");
-
-
+	
 	var target = event.target,
 	// keep the dragged position in the data-x/data-y attributes
 	x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx,
@@ -64,11 +63,12 @@ function dragMoveHandler (event){
 	// update the posiion attributes
 	target.setAttribute('data-x', x);
 	target.setAttribute('data-y', y);
-	interact('.trigger')
+	interact('.trigger');
 	
 }
 
-function dragMoveEndHandler(event){
+function dragEndHandler(event){
+top.postMessage("SUCCESS", "*");
 	console.log("dragEndHandler");
 	final();
 	}

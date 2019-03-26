@@ -7,8 +7,7 @@
 document.addEventListener("DOMContentLoaded", setup);
 
 function setup(){
-	var img = document.querySelector("img");
-	img.classList.add("hidden");
+	
 	window.onfocus = weAreFocus;
 	if (!window.DeviceOrientationEvent) {
 		return alert("NO DeviceOrientationEvent");
@@ -19,10 +18,7 @@ function setup(){
 		var rotateDegrees = ((event.alpha/360) + 1) % 1;
 		// gamma: left to right
 		var leftToRight = ((event.gamma/360) + 1) % 1;
-		// beta: front back motion
-		var frontToBack = ((event.beta/360) + 1) % 1;
-
-		drawProgress(frontToBack, document.querySelector(".x circle"));
+	
 		
 	};
 }
@@ -34,14 +30,10 @@ top.postMessage('SUCCESS', '*');
 
 function weAreFocus (event){
 	document.body.classList.add("red");
-	var img = document.querySelector("img");
-	img.classList.remove("hidden");
+	var smile = document.querySelector("smile");
+	smile.classList.remove("hidden");
 }
 
-function resizedHandler(){
-	top.postMessage('SUCCESS', '*');
-	console.log("resizedHandler");
-}
 
 
 function drawProgress(ratio, target){

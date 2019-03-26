@@ -13,7 +13,7 @@ body {
 	overflow: hidden;
 } 
 .red{
-	background-color: red;
+	background-color: blue;
 }
 
 .dropzone{
@@ -23,8 +23,23 @@ body {
 	width: 100px;
 	height: 100px;
 	border: solid 5px red;
+
 }
-svg{
-	    border: solid 2px black;
-    border-radius: 50%;
+
+
+#smile{
+	position: absolute;
+	top: 0px;
+	left:0px;
+	width: 200px;
+	height: 200px;
+	
+}
+
+#texte{
+	
+position: absolute;
+	top: 200px;
+	left: 180px;
+	border: solid 5px white;
 }
