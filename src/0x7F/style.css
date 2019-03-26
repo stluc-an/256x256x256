@@ -1,0 +1,44 @@
+html{
+	padding: 0; 
+	margin: 0;
+	overflow: hidden;
+	background: white;
+}
+body {
+	padding: 0; 
+	margin: 0;
+	background: #58316c;
+	width : 256px;
+	height : 256px;
+	overflow: hidden;
+} 
+.trigger{
+    background-image: url(./../../public/images/Khepri.png);
+	width: 200px;
+	height: 256px;
+    background-size:cover;
+    background-position: center bottom;
+    
+       
+}
+.hidden{
+    display: none;
+}
+
+
+.red{
+    background-color: #618bce;
+    background-image: url(./../../public/images/godsun.png);
+    width: 200px;
+	height: 200px;
+    background-size:cover;
+    background-position: center bottom;
+} 
+
+.trigger2{
+    background-image: url(./../../public/images/Godsunwifi.png);
+	width: 200px;
+	height: 200px;
+    background-size:cover;
+    background-position: center bottom;
+}
