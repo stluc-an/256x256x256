@@ -7,17 +7,45 @@
 document.addEventListener("DOMContentLoaded", setup);
 
 function doubleTapHandler (event){
-	top.postMessage('SUCCESS', '*');
+	//top.postMessage('SUCCESS', '*');
 	console.log("doubleTapHandler");
 }
 
 function setup(){
 	interact('.trigger')
-	.on("doubletap", doubleTapHandler)
-    DoubleTapDone();
+	.on("doubletap", DoubleTapDone)
+   // DoubleTapDone();
 }
 
 function DoubleTapDone(){
-    var trigger = document.querySelector("trigger");
+    var trigger = document.querySelector(".trigger");
 	trigger.classList.add("hide");
+    var white = document.querySelector(".white");
+    white.classList.remove("hide2");
+    var a = document.querySelector(".hide3");
+	a.classList.remove("hide3"); 
+    Focus()
 }
+
+function Focus(){
+	window.onfocus = weAreFocus;
+}
+
+function weAreFocus (event){
+	var trigger = document.querySelector(".trigger");
+	trigger.classList.add("hide");
+    var p = document.querySelector(".hide4");
+	p.classList.remove("hide4");
+     var white = document.querySelector(".white");
+    white.classList.add("hide2");
+    var a = document.querySelector(".hide3");
+    a.classList.add("hide3");
+    final()
+}
+
+function final(){
+top.postMessage('SUCCESS', '*');
+	
+}
+
+

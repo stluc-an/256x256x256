@@ -24,35 +24,28 @@ body {
     margin-top: 68px;
 }
 
-.hide {
-    display: none;
-}
-
 .white {
     color: white;
 }
 
-.hide2{
+.hide {
     display: none;
 }
 
 a {
-    font-size: 25px;
+    font-size: 23px;
 }
 
 .red{
 	background-color: red;
 }
 
-.hide3{
-    display: none;
+p {
+    color: white;
+    font-size: 35px;
+    margin-top: 80px;
 }
 
-.hide4{
+.hide2{
     display: none;
 }
-
-.hide5{
-    display: none;
-}
-

@@ -18,6 +18,7 @@ function weAreFocus (event){
 
 function setup(){
 	window.onfocus = weAreFocus;
+    
 }
 
 

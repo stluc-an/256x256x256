@@ -29,10 +29,17 @@ body {
     display: none;
 }
 
-.p {
+.white {
+    color: white;
+}
+
+.hide2 {
     display: none;
 }
 
-
+p {
+    font-size: 25px;
+    margin-bottom:13vh;
+}
 
 
