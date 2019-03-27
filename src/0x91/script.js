@@ -1,11 +1,4 @@
-/*----------------------------------------*\
-  256x256x256 - script.js
-  @author Evrard Vincent (vincent@ogre.be)
-  @Date:   2018-02-27 12:27:03
-  @Last Modified time: 2019-03-05 19:34:53
-\*----------------------------------------*/
-//http://qnimate.com/detect-shake-using-javascript/
-document.addEventListener("DOMContentLoaded", setup);
+ document.addEventListener("DOMContentLoaded", setup);
 
 function resizedHandler(){
 	top.postMessage('SUCCESS', '*');
@@ -22,10 +15,8 @@ function setup(){
 	shakeEvent.start();
 	window.onShake = shakeHandler;
 
-		interact('.trigger')
-	.on("doubletap", doubleTapHandler)
+
  
-    
 }
 
 //stop listening
@@ -35,4 +26,22 @@ function stopShake(){
 
 function shakeHandler(){
     alert("Shaked");
+
+    	var img = document.querySelector("img");
+	img.classList.add("hide");
+	var imgSucces = document.querySelector("img.succes");
+	imgSucces.classList.remove("hide");
+
+}
+
+
+
+function doubleTapHandler (event){
+	top.postMessage('SUCCESS', '*');
+	console.log("doubleTapHandler");
+}
+
+function setup2(){
+	interact('.imgSucces')
+	.on("doubletap", doubleTapHandler)
 }

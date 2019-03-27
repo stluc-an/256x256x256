@@ -4,7 +4,7 @@
   @Date:   2018-02-27 12:27:03
   @Last Modified time: 2019-01-31 12:18:31
 \*----------------------------------------*/
-document.addEventListener("DOMContentLoaded", setup);
+ document.addEventListener("DOMContentLoaded", setup);
 
 function dragMoveHandler (event){
 	var target = event.target,
@@ -28,18 +28,40 @@ function setup(){
 	.draggable({
 		// call this function on every dragmove event
 		onmove: dragMoveHandler,
-		onend: dragEndHandler,
+		onend: setup2,
 	});
+ 
+ 
+}
+
+function swipeHandler(){
+	top.postMessage('SUCCESS', '*');
+	console.log("swipeHandler...");
+	console.log("hello");
+}
 
 
-	var swipe = new Hammer(document);
+function setup2(){
+	var swipe = new Hammer(document.body);
 	swipe.get('swipe').set({ direction: Hammer.DIRECTION_ALL });
 	// detect swipe and call to a function
-	swipe.on('swiperight swipeleft ', function(e) {
+	swipe.on('swiperight swipeleft swipeup swipedown', function(e) {
 			alert(e.type);
 
 		if(e.type == 'swiperight'){}
 		if(e.type == 'swipeleft'){}
-		 
+		if(e.type == 'swipedown'){}
+		if(e.type == 'swipeup'){}
+			
+			
+
+ 	var img = document.querySelector("img");
+	img.classList.add("hide");
+	var imgSucces = document.querySelector("img.succes");
+	imgSucces.classList.remove("hide");
+	 
 	});
 }
+
+ 
+ 

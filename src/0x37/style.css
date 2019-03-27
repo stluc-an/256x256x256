@@ -19,11 +19,20 @@ body {
 	left: 120px;
 	width: 100px;
 	height: 100px;
-	 
+ 
+
 }
 
  .hide{
 	display: none;
  
 }
+
+ .trigger2{
+	width: 250px;
+	height: 50px;  
+	background-color:none;
+	position: absolute;
+	top: 44px;
+} 
 
