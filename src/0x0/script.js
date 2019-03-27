@@ -2,7 +2,7 @@
   256x256x256 - script.js
   @author Evrard Vincent (vincent@ogre.be)
   @Date:   2018-02-27 12:27:03
-  @Last Modified time: 2019-03-27 16:51:14
+  @Last Modified time: 2019-03-27 16:56:59
 \*----------------------------------------*/
 document.addEventListener("DOMContentLoaded", setup);
 
@@ -15,4 +15,3 @@ function setup(){
 	interact('.trigger')
 	.on("tap", tapHandler)
 }
-
