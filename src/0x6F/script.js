@@ -8,44 +8,22 @@ document.addEventListener("DOMContentLoaded", setup);
 
 
 function tapHandler (event){
-	//top.postMessage('SUCCESS', '*');
+	//top.postMessage('SUCCESS', '*'); //
 	console.log("tapHandler");
 
-	dragMoveHandler(); //
+	weAreOnline(); //
 }
 
 
-function dragMoveHandler (event){
-	
-	var target = event.target;
-	
-	// keep the dragged position in the data-x/data-y attributes
-
-	target.style.background = "orange";
-
-
-
-	/*target.setAttribute('data-x', 'data-y', "bonjour")    
-	console.log(target.getAttribute('data-x', 'data-y'));*/
-
-
-	
-	var x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx;
-	var y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy;
-	// translate the element
-	target.style.webkitTransform = target.style.transform = 'translate(' + x + 'px, ' + y + 'px)';
-	// update the posiion attributes
-	target.setAttribute('data-x', x);
-	target.setAttribute('data-y', y);
-	console.log("dragMoveHandler");
+function weAreOnline (event){
+	document.body.classList.add("red");
 	top.postMessage('SUCCESS', '*');
+	console.log("weAreOnline");
 
-
+	//window.ononline = weAreOnline;
 }
-
 
 function setup(){
-
 
 	var scale = 1,
 	    gestureArea = document.querySelector('#pinch-area'),
@@ -60,6 +38,7 @@ function setup(){
 	      scaleElement.style.transform =
 	        'scale(' + scale + ')';
 
+	      
 	    },
 	    /*onend: function (event) {
 	      alert("YO");
@@ -67,12 +46,7 @@ function setup(){
 });
 
 
-
-	interact('.trigger')
-	.draggable({
-		// call this function on every dragmove event
-		onmove: dragMoveHandler
-	});
+	window.ononline = weAreOnline;
 }
 
 //OU:
