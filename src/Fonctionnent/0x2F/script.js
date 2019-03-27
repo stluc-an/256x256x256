@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", setup);
 function dragMoveHandler (event){
 	
 	var target = event.target;
-	target.style.background ="gold";
 	// keep the dragged position in the data-x/data-y attributes
 	//target.getAttribute('data-x')
 	var x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx;
