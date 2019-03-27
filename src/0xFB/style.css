@@ -1,0 +1,28 @@
+html{
+	padding: 0; 
+	margin: 0;
+	overflow: hidden;
+	background: white;
+}
+body {
+	padding: 0; 
+	margin: 0;
+	background: white;
+	width : 256px;
+	height : 256px;
+	overflow: hidden;
+} 
+
+h1 {
+	color: black;
+	text-align: center;
+
+
+}
+.red{
+	background-color: red;
+}
+
+
+
+

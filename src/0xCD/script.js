@@ -29,8 +29,10 @@ function getSelectionText() {
     }
     if (text.trim() == "search") {
  	   console.log(text);
+
      var myContainer = document.querySelector(".selectContainer");
      myContainer.classList.add("hide");
+     
      startAnim();
 	}
 }
