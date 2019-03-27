@@ -22,20 +22,11 @@ function setup(){
         
       },
       onend: function (event) {
-        alert("YO");
+        alert("Tourner c'est bien.");
       }
     });
-}
 
-document.addEventListener("DOMContentLoaded", setup);
-
-function resizedHandler(){
-  top.postMessage('SUCCESS', '*');
-  console.log("resizedHandler");
-}
-
-function setup(){
-  if (!window.DeviceOrientationEvent) {
+    if (!window.DeviceOrientationEvent) {
     return alert("NO DeviceOrientationEvent");
   }
 
@@ -52,6 +43,32 @@ function setup(){
     drawProgress(rotateDegrees, document.querySelector(".z circle"));
   };
 }
+
+document.addEventListener("DOMContentLoaded", setup);
+
+function resizedHandler(){
+  top.postMessage('SUCCESS', '*');
+  console.log("resizedHandler");
+}
+
+/*function setup(){
+  if (!window.DeviceOrientationEvent) {
+    return alert("NO DeviceOrientationEvent");
+  }
+
+  window.ondeviceorientation =  function(event) {
+    // alpha: rotation around z-axis
+    var rotateDegrees = ((event.alpha/360) + 1) % 1;
+    // gamma: left to right
+    var leftToRight = ((event.gamma/360) + 1) % 1;
+    // beta: front back motion
+    var frontToBack = ((event.beta/360) + 1) % 1;
+
+    drawProgress(frontToBack, document.querySelector(".x circle"));
+    drawProgress(leftToRight, document.querySelector(".y circle"));
+    drawProgress(rotateDegrees, document.querySelector(".z circle"));
+  };
+}*/
 
 function drawProgress(ratio, target){
   var twoPi =  Math.PI * 2;

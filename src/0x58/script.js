@@ -1,31 +1,68 @@
-/*----------------------------------------*\
-  256x256x256 - script.js
-  @author Evrard Vincent (vincent@ogre.be)
-  @Date:   2018-02-27 12:27:03
-  @Last Modified time: 2019-01-31 12:06:22
-\*----------------------------------------*/
 document.addEventListener("DOMContentLoaded", setup);
 
-function setup(){
-	var trigger1 = interact(".trigger1");
-	trigger1.on("tap", step1);
-}
-
-function step1(event){
-	var btnToHide = document.querySelector(".trigger1");
-	btnToHide.classList.add("hidden");
-
-	var btnToShow = document.querySelector(".trigger2");
-	btnToShow.classList.remove("hidden");
-
-	var trigger2 = interact(".trigger2");
-	trigger2.on("tap", tapHandler);
-}
-
-function tapHandler (event){
-	var btnToHide = document.querySelector(".trigger2");
-	btnToHide.classList.add("hidden");
-
+/*function rotateHandler(){
 	top.postMessage('SUCCESS', '*');
-	console.log("tapHandler");
+	console.log("resizedHandler");
+}*/
+
+/*function resizedHandler(){
+
+}*/
+
+var angle = 0;
+
+function setup(){
+	/*var trigger = interact('.trigger');
+	trigger.rotable({onmove: rotateHandler});*/
+	interact('#rotate-area').gesturable({
+		onmove: function (event) {
+			var arrow = document.querySelector('#toRot');
+
+			angle += event.da;
+			arrow.style.webkitTransform = arrow.style.transform = 'rotate(' + angle + 'deg)';
+
+
+			document.querySelector('#angle-info').textContent = angle.toFixed(2) + '\u00b0';
+			if(angle > 100 && angle < 360){
+				startSwipe();
+			}
+		}
+	});
 }
+
+function startSwipe(){
+	var swipe = new Hammer(document);
+	swipe.get('swipe').set({ direction: Hammer.DIRECTION_ALL });
+	// detect swipe and call to a function
+	swipe.on('swiperight swipeleft swipeup swipedown', function(e) {
+			alert(e.type);
+
+		if(e.type == 'swiperight'){}
+		if(e.type == 'swipeleft'){}
+		if(e.type == 'swipeup'){}
+		if(e.type == 'swipedown'){}
+	});
+}
+
+/*document.addEventListener("DOMContentLoaded", setup);*/
+
+/*function swipeHandler(){
+	top.postMessage('SUCCESS', '*');
+	console.log("swipeHandler...");
+	console.log("hello");
+}*/
+
+
+/*function setup(){
+	var swipe = new Hammer(document);
+	swipe.get('swipe').set({ direction: Hammer.DIRECTION_ALL });
+	// detect swipe and call to a function
+	swipe.on('swiperight swipeleft swipeup swipedown', function(e) {
+			alert(e.type);
+
+		if(e.type == 'swiperight'){}
+		if(e.type == 'swipeleft'){}
+		if(e.type == 'swipeup'){}
+		if(e.type == 'swipedown'){}
+	});
+}*/

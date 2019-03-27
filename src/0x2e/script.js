@@ -1,11 +1,19 @@
 document.addEventListener("DOMContentLoaded", setup);
 
+function setup(){
+  var trigger = interact('.trigger');
+  trigger.draggable({onmove: dragMoveHandler});
+
+  var input = document.querySelector("input");
+  input.onkeyup = changeHandler;
+}
+
 function dragMoveHandler (event){
   
   var target = event.target;
   // keep the dragged position in the data-x/data-y attributes
   
-  target.style.background = "red";
+  target.style.background = "powderblue";
 
   var x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx;
   var y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy;
@@ -19,28 +27,13 @@ function dragMoveHandler (event){
   
 }
 
-
-function setup(){
-  var trigger = interact('.trigger');
-  trigger.draggable({onmove: dragMoveHandler});
-
-  var input = document.querySelector("input");
-  input.onkeyup = changeHandler;
-}
-
-document.addEventListener("DOMContentLoaded", setup);
-
 function changeHandler (event){
   var txt = event.target.value;
-  var h1 = document.querySelector("h1");
-  h1.innerText = txt;
-  if(txt == "wonderful"){
+  var h3 = document.querySelector("h3");
+  h3.innerText = txt;
+  if(txt == "il faut partir a point"){
     top.postMessage('SUCCESS', '*');
-    alert("LOL");
+    alert("Quel genie !");
   }
 }
 
-/*function setup(){
-  var input = document.querySelector("input");
-  input.onkeyup = changeHandler;
-}*/
