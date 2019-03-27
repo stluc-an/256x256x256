@@ -13,7 +13,7 @@ function setup(){
 }
 
 function tapHandler (event){
-	top.postMessage('SUCCESS', '*');
+	//top.postMessage('SUCCESS', '*');
 	console.log("tapHandler");
     tapHandlerDone()
     

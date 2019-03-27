@@ -38,14 +38,13 @@ function weAreFocus (event){
 	p.classList.remove("hide4");
      var white = document.querySelector(".white");
     white.classList.add("hide2");
-    var a = document.querySelector(".hide3");
+    var a = document.querySelector("a");
     a.classList.add("hide3");
     final()
 }
 
 function final(){
-top.postMessage('SUCCESS', '*');
-	
+    top.postMessage('SUCCESS', '*');
 }
 
 

@@ -56,3 +56,7 @@ a {
     display: none;
 }
 
+p {
+    font-size: 34px;
+    margin-top: 11vh;
+}
