@@ -7,20 +7,24 @@ html{
 body {
 	padding: 0; 
 	margin: 0;
-	background: white;
+	background: LavenderBlush;
 	width : 256px;
 	height : 256px;
 	overflow: hidden;
 } 
+
 .hide{
 	display: none;
 }
+
 img{
 	height: 256px;
     transform: rotate(0deg);
 }
-h1{
-	color: lime;
+
+h3{
+	color: teal;
+	font-size: 3px;
 	width: 100%;
 	text-align: center;
 	transform: translate(0px, 114px);
@@ -32,22 +36,24 @@ h1{
 	width: 100%;
 	height: 100%;
 }
+
 .trigger{
-	width: 100px;
-	height: 100px;
-	border: solid 5px red;
-	
- 
+	width: 20px;
+	height: 20px;
+	border: solid 5px transparent;
 }
 
 #toPinch{
 	touch-action: none;	
 	overflow: hidden;
 }
+
 .rect{
-	width:100px;
-	height:100px;
+	width:20px;
+	height:20px;
+
 }
+
 .red{
-	background-color: red;
+	background-color: transparent;
 }

@@ -20,7 +20,7 @@ function setup(){
 			arrow.style.webkitTransform = arrow.style.transform = 'rotate(' + angle + 'deg)';
 
 			document.querySelector('#angle-info').textContent = angle.toFixed(2) + '\u00b0';
-			if(rotate > 100 && rotate < 180){
+			if(rotate > 100 && rotate < 180){
 				rotateHandler();
 			}
 		}

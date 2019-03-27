@@ -14,24 +14,31 @@ body {
 } 
 
 .dropzone{
-	margin-top: 40px; 
+	margin-top: 45px; 
+	margin-left: 100px;
 	top: 50px;
 	left: 50px;
 	width: 150px;
 	height: 50px;
-	border: solid 2px red;
+	border: solid 2px transparent;
 }
 
 p{
 	color: white;
 }
 
-h1{
-	color: lime;
+h3{
+	color: purple;
 }
 
 .trigger{
+	margin-left: 20px;
 	background-color: transparent;
 	border: none;
 	color: red;
+}
+
+img.{
+	width: 60px;
+	height: auto;
 }

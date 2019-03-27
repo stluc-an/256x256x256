@@ -31,7 +31,6 @@ function setup(){
 	      
 	    },
 	    onend: function (event) {
-	      alert("YO");
 	    }
 	  });
 }
@@ -39,8 +38,8 @@ function setup(){
 function timeoutHandler(){
 	var img = document.querySelector("img");
 	img.classList.add("hide");
-	var h1 = document.querySelector("h1");
-	h1.classList.remove("hide");
+	var h3 = document.querySelector("h3");
+	h3.classList.remove("hide");
 }
 
 
@@ -51,14 +50,14 @@ function animate(){
 	requestAnimationFrame(animate);
 }
 
-document.addEventListener("DOMContentLoaded", setup);
+/*document.addEventListener("DOMContentLoaded", setup);*/
 
 function tapHandler (event){
 	top.postMessage('SUCCESS', '*');
 	console.log("tapHandler");
 }
 
-¨/*function setup(){
+/*function setup(){
 	var scale = 1,
 	    gestureArea = document.querySelector('#pinch-area'),
 	    scaleElement = document.querySelector('#toPinch'),

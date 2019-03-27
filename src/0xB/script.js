@@ -13,7 +13,6 @@ top.postMessage('SUCCESS', '*');
 
 function weAreFocus (event){
 	document.body.classList.add("red");
-	
 }
 
 function setup(){
