@@ -1,0 +1,96 @@
+html{
+	padding: 0; 
+	margin: 0;
+	overflow: hidden;
+	background: white;
+}
+#carreaux{
+	width: 256px;
+	height: 130px;
+	background-image:url("./../../public/images/carreaux.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+	top:26px;
+}
+#hot{
+	width: 100px;
+	height: 100px;
+	background-image:url("./../../public/images/hot.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+	bottom:40px;
+	left:65px;
+}
+#plan{
+	width: 256px;
+	height: 10px;
+	background-color: grey;
+	position: relative;
+	bottom: 113px;
+}
+#plate{
+	width: 70px;
+    height: 7px;
+    background-color: white;
+    position: relative;
+    bottom: 130px;
+    left: 20px;
+}
+#chicken{
+	position: absolute;
+    width: 130px;
+    height: 130px;
+    top: 0;
+}
+#chicken img{
+	width: 100%;
+}
+body {
+	padding: 0; 
+	margin: 0;
+	background: orange;
+	width : 256px;
+	height : 256px;
+	overflow: hidden;
+} 
+.oven {
+	width:100px;
+	height:100px;
+	background-image: url("./../../public/images/Oven.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: absolute;
+	left:76px;
+	top: 140px;
+}
+.openOven{
+	width:100px;
+	height:10px;
+	position: absolute;
+	left:76px;
+	top: 230px;
+}
+.rectangle{
+	width:120px;
+	height:110px;
+	position: absolute;
+	left:66px;
+	top: 135px;
+}
+.black{
+	background-color: black;
+}
+.grey{
+	background-color:grey;
+}
+.hidden{
+	display: none;
+}
+.pointer{
+	cursor: pointer;
+}
+.dropzone{
+	position: absolute;
+}
