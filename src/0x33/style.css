@@ -1,0 +1,49 @@
+html{
+	padding: 0; 
+	margin: 0;
+	overflow: hidden;
+	background: white;
+}
+body {
+	padding: 0; 
+	margin: 0;
+	background: black;
+	width : 256px;
+	height : 256px;
+	overflow: hidden;
+	background-image:url(../../public/images/0x33arbre.png);
+} 
+
+.trigger{
+position: absolute;
+	top: 50px;
+	left: 70px;
+	width: 20px;
+	height: 20px;
+	background-image:url(../../public/images/0x33pomme1.png);
+
+}
+
+
+.trigger2{
+position: absolute;
+	top: 60px;
+	left: 200px;
+	width: 20px;
+	height: 20px;
+	background-image:url(../../public/images/0x33pomme2.png);
+
+}
+
+
+
+.dropzone{
+    position: absolute;
+    top: 194px;
+    left: 169px;
+    width: 51px;
+    height: 51px;
+    border: solid 5px red;
+    border-radius: 100%;
+    border-style: dashed;
+}
