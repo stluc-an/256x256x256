@@ -2,7 +2,7 @@
   256x256x256 - script.js
   @author Evrard Vincent (vincent@ogre.be)
   @Date:   2018-02-27 12:27:03
-  @Last Modified time: 2019-03-07 11:49:12
+  @Last Modified time: 2019-03-28 16:09:23
 \*----------------------------------------*/
 //http://qnimate.com/detect-shake-using-javascript/
 document.addEventListener("DOMContentLoaded", setup);
@@ -48,7 +48,7 @@ function setup2(){
 	swipe.get('swipe').set({ direction: Hammer.DIRECTION_ALL });
 	// detect swipe and call to a function
 	swipe.on(' swiperight ', function(e) {
-			alert(e.type);
+			swipeHandler();
 
 		if(e.type == 'swiperight'){}
 		

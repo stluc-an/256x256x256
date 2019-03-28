@@ -31,7 +31,7 @@ function shakeHandler(){
 	img.classList.add("hide");
 	var imgSucces = document.querySelector("img.succes");
 	imgSucces.classList.remove("hide");
-
+	
 }
 
 

@@ -2,11 +2,11 @@
   256x256x256 - script.js
   @author Evrard Vincent (vincent@ogre.be)
   @Date:   2018-02-27 12:27:03
-  @Last Modified time: 2019-03-05 19:34:53
+  @Last Modified time: 2019-03-28 16:11:21
 \*----------------------------------------*/
 //http://qnimate.com/detect-shake-using-javascript/
 document.addEventListener("DOMContentLoaded", setup);
-
+let i = 0 ; 
 function resizedHandler(){
 	top.postMessage('SUCCESS', '*');
 	console.log("resizedHandler");
@@ -30,5 +30,7 @@ function stopShake(){
 }
 
 function shakeHandler(){
-    alert("Shaked");
+	
+	if(i == 1 ) resizedHandler();
+	i++;
 }
