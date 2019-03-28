@@ -1,29 +1,72 @@
 html{
-  padding: 0; 
-  margin: 0;
-  overflow: hidden;
-  background: white;
+	padding: 0; 
+	margin: 0;
+	overflow: hidden;
+	background: white;
 }
 body {
-  padding: 0; 
-  margin: 0;
-  background: teal;
-  width : 256px;
-  height : 256px;
-  overflow: hidden;
+	padding: 0; 
+	margin: 0;
+	background: orange;
+	width : 256px;
+	height : 256px;
+	overflow: hidden;
 } 
-.circle{
-  width:75px;
-  height:75px;
-  border-radius: 50%;
+h1{
+	color: azure;
 }
-
-.blue{
-  background-color: transparent;
+#carreaux{
+	width: 256px;
+	height: 50px;
+	background-image:url("./../../public/images/carreaux.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+	top:200px;
 }
-
-h3{
-  color: lightgrey;
+#Verre img{
+	width: 200px;
+	height: 165px;
+	position: absolute;
+	left:-20px;
+	bottom: 1415px;
 }
-
-
+.hidden{
+	display:none;
+}
+#milk img{
+	width: 200px;
+	height: 280px;
+	position: relative;
+    bottom: 105px;
+    left: 91px;
+}
+.liquid{
+	width: 90px;
+    height: 100px;
+    background-color: white;
+    position: relative;
+    left: 30px;
+    bottom: 108px;
+    }
+#pinkStraw img{
+	width: 200px;
+    height: 150px;
+    position: relative;
+    left: 2px;
+    top: -30px;
+}
+#greyStraw img{
+	width: 200px;
+    height: 150px;
+    position: relative;
+    left: 2px;
+    top: -30px;
+}
+input{
+	width: 100px;
+    height: 20px;
+    position: relative;
+    left: 140px;
+    bottom: 260px;
+}
