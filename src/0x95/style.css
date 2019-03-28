@@ -1,0 +1,52 @@
+html{
+	padding: 0; 
+	margin: 0;
+	overflow: hidden;
+	background: white;
+}
+body {
+	padding: 0; 
+	margin: 0;
+	background: white;
+	width : 256px;
+	height : 256px;
+	overflow: hidden;
+} 
+
+
+svg{
+    border: solid 2px black;
+    border-radius: 50%;
+}
+
+.milk{
+	background-image: url(./../../public/images/milkglass2.jpg);
+    background-repeat: no-repeat;
+	width: 256px;
+	height: 256px;
+}
+
+.hide{
+	display: none;
+}
+
+#rotate-area{
+	width: 256px;
+	height: 256px;
+}
+
+#toRot{
+	touch-action: none;	
+	overflow: hidden;
+	transform: rotate(20deg);
+}
+.shake{
+    background-image: url(./../../public/images/milkshake.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 65px;
+    top: 25px;
+	width:256px;
+	height:256px;
+}
+
