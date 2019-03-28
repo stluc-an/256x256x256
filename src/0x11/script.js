@@ -2,7 +2,7 @@
   256x256x256 - script.js
   @author Evrard Vincent (vincent@ogre.be)
   @Date:   2018-02-27 12:27:03
-  @Last Modified time: 2019-03-28 09:49:50
+  @Last Modified time: 2019-03-28 14:37:01
 \*----------------------------------------*/
 document.addEventListener("DOMContentLoaded", setup);
 
@@ -22,7 +22,7 @@ function step1(){
 	egg1.classList.add("hide");
 	crackedEgg1.classList.remove("hide");
 	coockedEgg.classList.remove("hide");
-	interact.on ("doubletap",step2);
+	step2();
 }
 function step2(){
 	interact('.trigger2')
@@ -35,9 +35,5 @@ function step3 (){
 	egg2.classList.add("hide");
 	crackedEgg2.classList.remove("hide");
 	coockedEgg.classList.remove("hide");
-	interact.on("doubletap",step4);
-}
-function step4 (){
-	interact('.trigger2')
-	.on("doubletap", doubleTapHandler);
+	doubleTapHandler();
 }

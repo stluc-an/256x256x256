@@ -2,7 +2,7 @@
   256x256x256 - script.js
   @author Evrard Vincent (vincent@ogre.be)
   @Date:   2018-02-27 12:27:03
-  @Last Modified time: 2019-01-31 12:05:55
+  @Last Modified time: 2019-03-28 14:38:57
 \*----------------------------------------*/
 document.addEventListener("DOMContentLoaded", setup);
 
@@ -15,16 +15,8 @@ function doubleTapHandler (event){
 	console.log("doubleTapHandler");
 }
 
-
-
-
 function setup(){
-
-	var trigger1 = interact (".trigger1");
-	var trigger2 = interact (".trigger2");
-
-	trigger1.on("doubletap", step1)
-	trigger2.on("doubletap", doubleTapHandler)
+	interact (".trigger1").on("doubletap", step1)
 }
 
 function step1(event){
@@ -34,4 +26,5 @@ function step1(event){
 
 	var  btnToShow = document.querySelector(".trigger2");
 	btnToShow.classList.remove("hidden");
+	interact (".trigger2").on("doubletap", doubleTapHandler)
 }

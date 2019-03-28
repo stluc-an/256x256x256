@@ -58,7 +58,7 @@ interact('.draggable')
     // call this function on every dragend event
     onend: function (event) {
       var textEl = event.target.querySelector('p');
-
+      final();
       textEl && (textEl.textContent =
         'VOILA! '
         + (Math.sqrt(Math.pow(event.pageX - event.x0, 2) +
@@ -69,4 +69,7 @@ interact('.draggable')
     
 }
 
+function final(){
+  top.postMessage('SUCCESS', '*');
+}
 

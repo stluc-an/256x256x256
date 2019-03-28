@@ -2,7 +2,7 @@
   256x256x256 - script.js
   @author Evrard Vincent (vincent@ogre.be)
   @Date:   2018-02-27 12:27:03
-  @Last Modified time: 2019-01-31 12:18:31
+  @Last Modified time: 2019-03-28 13:07:24
 \*----------------------------------------*/
 document.addEventListener("DOMContentLoaded", setup);
 
@@ -23,10 +23,6 @@ function dragEndHandler(event){
 	console.log("dragEndHandler");
 }
 
-function final(){
-top.postMessage('SUCCESS', '*');
-	
-}
 
 function weAreFocus (event){
 	document.body.classList.add("red");

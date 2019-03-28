@@ -2,7 +2,7 @@
   256x256x256 - script.js
   @author Evrard Vincent (vincent@ogre.be)
   @Date:   2018-02-27 12:27:03
-  @Last Modified time: 2019-02-22 11:11:39
+  @Last Modified time: 2019-03-28 14:06:55
 \*----------------------------------------*/
 document.addEventListener("DOMContentLoaded", setup);
 
@@ -53,7 +53,6 @@ function changeHandler (event){
 	h1.innerText = txt;
 	if(txt == "bonjour"){
 		top.postMessage('SUCCESS', '*');
-		alert("SUPER");
 	}
 }
 

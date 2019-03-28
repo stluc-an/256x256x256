@@ -2,7 +2,7 @@
   256x256x256 - script.js
   @author Evrard Vincent (vincent@ogre.be)
   @Date:   2018-02-27 12:27:03
-  @Last Modified time: 2019-01-31 12:06:22
+  @Last Modified time: 2019-03-28 13:00:00
 \*----------------------------------------*/
 document.addEventListener("DOMContentLoaded", setup);
 
@@ -21,9 +21,7 @@ function dragMoveHandler (event){
     target.setAttribute('data-x', x);
     target.setAttribute('data-y', y);
 	//console.log("dragMoveHandler");
-	//top.postMessage('SUCCESS', '*');
-
-    
+	//top.postMessage('SUCCESS', '*');   
 }
 
 function setup(){
