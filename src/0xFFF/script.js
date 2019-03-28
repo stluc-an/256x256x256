@@ -4,7 +4,7 @@
   @Date:   2018-02-27 12:27:03
   @Last Modified time: 2019-01-29 18:17:55
 \*----------------------------------------*/
-let availableLVL = ["0x00"];//(new Array(256)).fill().map((p, k)=>{k = k.toString(16);while(k.length<2) k = "0"+k;return "0x"+k});
+let availableLVL = ["0x1C"];//(new Array(256)).fill().map((p, k)=>{k = k.toString(16);while(k.length<2) k = "0"+k;return "0x"+k});
 let historyLVL = [];
 let failTimeout ;
 let failAfter = 140000;

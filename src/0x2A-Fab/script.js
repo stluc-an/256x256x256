@@ -7,28 +7,38 @@
 document.addEventListener("DOMContentLoaded", setup);
 
 function dragMoveHandler (event){
-	
-    var target = event.target;
-    target.setAttribute('data-x', "bonjour ");
-    console.log(target.getAttribute('class'));
-    var x = (parseFloat(target.getAttribute('data-x')))+ event.dx;
-    console.log(x, y);
-        
-	// keep the dragged position in the data-x/data-y attributes
-	 || 0) 
-	var y = (parseFloat(target.getAttribute('data-y')) || 0); 
-	// translate the element
-	target.style.webkitTransform = target.style.transform = 'translate(' + x + 'px, ' + y + 'px)';
-	// update the posiion attributes
-	target.setAttribute('data-x', x);
-	target.setAttribute('data-y', y);
-	console.log("dragMoveHandler");
-	top.postMessage('SUCCESS', '*');
+	var target = event.target,
+        // keep the dragged position in the data-x/data-y attributes
+        x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx,
+        y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy;
+
+    // translate the element
+    target.style.webkitTransform =
+    target.style.transform =
+      'translate(' + x + 'px, ' + y + 'px)';
+
+    // update the posiion attributes
+    target.setAttribute('data-x', x);
+    target.setAttribute('data-y', y);
+	//console.log("dragMoveHandler");
+	//top.postMessage('SUCCESS', '*');
+
+    
 }
+
 function setup(){
-	interact('.trigger')
+	interact('.drag')
 	.draggable({
-		// call this function on every dragmove event
+	inertia: true,
+    
+        // call this function on every dragmove event
 		onmove: dragMoveHandler
 	});
+}
+
+window.DeviceOrientationEvent=succes()
+
+function succes(){
+    top.postMessage('SUCCESS', '*');
+    console.log("succes");
 }
