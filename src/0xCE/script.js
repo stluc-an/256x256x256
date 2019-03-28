@@ -2,7 +2,7 @@
   256x256x256 - script.js
   @author Evrard Vincent (vincent@ogre.be)
   @Date:   2018-02-27 12:27:03
-  @Last Modified time: 2019-01-31 12:06:22
+  @Last Modified time: 2019-03-28 11:57:13
 \*----------------------------------------*/
 document.addEventListener("DOMContentLoaded", setup);
 //récupère les donnees du truc
@@ -29,8 +29,7 @@ function getSelectionText() {
 
 function myKeyPress(event) {
     if (event.which == 13 || event.keyCode == 13) {
-    	alert("bien joué !")
-		alert.onclick = click;
+    	click();
         //code to execute here
         return false;
     }
