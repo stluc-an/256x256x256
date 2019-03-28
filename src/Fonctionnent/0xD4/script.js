@@ -23,8 +23,8 @@ function timeoutHandler(){
 
   var img = document.querySelector("img");
   img.classList.add("hidden");
-  var test1= document.querySelector("#test1");
-  test1.classList.remove("hidden");
+  var test= document.querySelector("#test");
+  test.classList.remove("hidden");
 
 interact('.trigger')
   .resizable({
