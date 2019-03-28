@@ -6,8 +6,14 @@
 \*----------------------------------------*/
 document.addEventListener("DOMContentLoaded", setup);
 
-function setup(){
-	
+function pinchHandler(){
+	var trigger = interact('.trigger');
+	trigger.draggable({onmove: dragMoveHandler});
+
+
+	var mouche = document.querySelector("mouche");
+	vivante.classList.remove("hidden");
+
 	var scale = 1,
 	    gestureArea = document.querySelector('#pinch-area'),
 	    scaleElement = document.querySelector('#toPinch'),
@@ -23,26 +29,31 @@ function setup(){
 
 	      
 	    },
-	    onend: function (event) {
-	      var img = document.querySelector("vivante");
-	vivante.classList.remove("hidden");
+	   onend: function (event) {
+	      
+	dragMoveHandler();
 	    }
 	  });
-
-	
-	var trigger = interact('.trigger');
-	trigger.draggable({onmove: dragMoveHandler});
+	 
 }
 
-function tapHandler (event){
-	var img = document.querySelector("img");
-	spir.classList.add("hidden");
-	console.log("tapHandler");
+function setup(){
+	pinchHandler();
+
 }
 
 
 function dragMoveHandler (event){
 
+	var dropzone = document.querySelector("#dropzone");
+	dropzone.classList.remove("hidden");
+	var mouche = document.querySelector("mouche");
+	vivante.classList.add("hidden");
+	var poubelle = document.querySelector("#bin");
+	bin.classList.remove("hidden");
+	var moucheMorte = document.querySelector("#morte");
+	morte.classList.remove("hidden");
+	
 	var target = event.target,
 	// keep the dragged position in the data-x/data-y attributes
 	x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx,
@@ -52,24 +63,17 @@ function dragMoveHandler (event){
 	// update the posiion attributes
 	target.setAttribute('data-x', x);
 	target.setAttribute('data-y', y);
-	interact('.trigger')
-	chronoTimeout = setTimeout(timeoutHandler,3000);
-	window.onmousedown = function(){
-			clearTimeout(chronoTimeout);
-			chronoTimeout = setTimeout(timeoutHandler,3000);
-		}
+	interact('.trigger');
 	
 }
 
 function dragEndHandler(event){
+top.postMessage("SUCCESS", "*");
 	console.log("dragEndHandler");
-	
+	final();
 	}
 
-
-function timeoutHandler(){
-	var spirale = document.querySelector("spirale");
-	spir.classList.remove("hidden");
-	top.postMessage('SUCCESS', '*');
+function final(){
+	alert("ouais!");
+top.postMessage('SUCCESS', '*');
 }
-

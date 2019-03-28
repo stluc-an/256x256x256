@@ -10,19 +10,24 @@ document.addEventListener("DOMContentLoaded", setup);
 function tapHandler (event){
 	top.postMessage('SUCCESS', '*');
 	console.log("tapHandler");
-	var img = document.querySelector("toPinch");
-	toPinch.classList.add("hidden");
+	
 }
+
 
 function setup(){
 	 var img = document.querySelector("ouvert");
 	ouvert.classList.add("hidden");
+	
+pinch();
+	
+}
+
+function pinch (){
 	var scale = 1,
 	    gestureArea = document.querySelector('#pinch-area'),
 	    scaleElement = document.querySelector('#toPinch'),
 	    resetTimeout;
-
-	interact(gestureArea)
+interact(gestureArea)
 	  .gesturable({
 	    onmove: function (event) {
 	      scale = scale * (1 + event.ds);
@@ -33,13 +38,23 @@ function setup(){
 	      
 	    },
 	    onend: function (event) {
-	    	var img = document.querySelector("toPinch");
-	toPinch.classList.add("hidden");
-	      var img = document.querySelector("ouvert");
-	ouvert.classList.remove("hidden");
+	    	
+	      tap();
 	    }
 	  });
-	  interact('.trigger')
-	.on("tap", tapHandler)
+	 
+}
+function tap(){
+	interact('.trigger')
+	.on("tap", banane)
+	alert('tap');
 }
 
+function banane(){
+	 var img = document.querySelector("toPinch");
+	toPinch.classList.add("hidden");
+
+	var img = document.querySelector("ouvert");
+	ouvert.classList.remove("hidden");
+	tapHandler();
+}

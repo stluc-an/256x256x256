@@ -7,7 +7,7 @@ html{
 body {
 	padding: 0; 
 	margin: 0;
-	background-size: contain;
+	
 	width : 256px;
 	height : 256px;
 	overflow: hidden;
@@ -21,41 +21,39 @@ body {
 .trigger{
 	width: 100px;
 	height: 100px;
-	border: solid 5px red;
-	
- 
-}
-
-#toPinch{
-	touch-action: none;	
-	overflow: hidden;
-}
-.rect{
-	width:100px;
-	height:100px;
-}
-.red{
-	background-color: red;
 }
 
 .dropzone{
 	position: absolute;
-	top: 105px;
-	left: 90px;
-	width: 100px;
-	height: 100px;
-	border: solid 1px beige;
-}
-.spir{
-	position: absolute;
-	width: 100px;
-	height: 100px;
+	top: 50px;
+	left: 120px;
+	width: 70px;
+	height: 70px;
+	border: solid 1px green;
+	z-index: 10;
 }
 
-img{
-	width: 40px;
-	height: 40px;
+
+#bin{
+		position: absolute;
+	width: 256px;
+	height: 256px;
 }
+#toPinch{
+	touch-action: none;	
+	overflow: hidden;
+	position: absolute;
+	width: 256px;
+	height: 256px;
+}
+
+#morte{
+	position: absolute;
+	width: 56px;
+	height: 56px;
+	z-index: 10;
+}
+
 .hidden {
 	display: none;
 }

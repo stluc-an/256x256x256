@@ -6,14 +6,22 @@
 \*----------------------------------------*/
 document.addEventListener("DOMContentLoaded", setup);
 
-function setup(){
-	var trigger = interact('.trigger');
-	trigger.draggable({onmove: dragMoveHandler});
-	interact('.trigger')
 
+var resizeContainer;
+
+function setup(){
+	resizer(); 
+	
+}
+
+function resizer(){
+	
+	
+	resizeContainer = interact('.trigger')
 	.resizable({
 		// resize from all edges and corners
 		edges: { left: true, right: true, bottom: true, top: true },
+		inertia:true
 	})
 	.on('resizemove', function (event) {
 		var target = event.target,
@@ -35,24 +43,19 @@ function setup(){
 		target.setAttribute('data-y', y);
 		target.textContent = Math.round(event.rect.width) + '\u00D7' + Math.round(event.rect.height);
 
-		if(event.rect.width > 10000 && event.rect.height > 10000){
+		if(event.rect.width < 105 && event.rect.height < 105){
 			resizedHandler();
 		}
 	});
-
-	
 }
 
 function resizedHandler(){
-	
-		var div = document.querySelector("dropzone");
-	dropzone.classList.remove("hidden");
-	
+	resizeContainer.off('resizemove');
 	var trigger = interact('.trigger');
 	trigger.draggable({onmove: dragMoveHandler});
-	interact('.trigger')
-
 	console.log("resizedHandler");
+	var dropzone = document.querySelector("#dropzone");
+	dropzone.classList.remove("hidden");
 
 }
 
@@ -71,12 +74,12 @@ function dragMoveHandler (event){
 	// update the posiion attributes
 	target.setAttribute('data-x', x);
 	target.setAttribute('data-y', y);
-	interact('.trigger')
+	interact('.trigger');
 	
 }
 
 function dragEndHandler(event){
-	
+top.postMessage("SUCCESS", "*");
 	console.log("dragEndHandler");
 	}
 
