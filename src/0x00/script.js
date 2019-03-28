@@ -6,19 +6,27 @@
 \*----------------------------------------*/
 document.addEventListener("DOMContentLoaded", setup);
 
+
 function tapHandler (event){
 	top.postMessage('SUCCESS', '*');
 	console.log("tapHandler");
-	interact('.trigger')
-	.on("tap", tapHandler2)
+		var btnToHide = document.querySelector(".trigger2");
+	btnToHide.classList.add("hidden");
 }
-
 
 function setup(){
-	interact('.trigger')
-	.on("tap", tapHandler)
+	var trigger1 = interact('.trigger1');
+	trigger1.on("tap", step1);
+	
 }
 
-function tapHandler2 (event){
-	top.postMessage('SUCCESS', '*');
-	console.log("tapHandler");
+function step1(event){
+	var btnToHide = document.querySelector(".trigger1");
+	btnToHide.classList.add("hidden");
+	var btnToShow = document.querySelector(".trigger2");
+	btnToShow.classList.remove("hidden");
+
+	var trigger2 = interact('.trigger2');
+	trigger2.on("tap", tapHandler);
+}
+

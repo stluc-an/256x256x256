@@ -12,3 +12,12 @@ body {
 	height : 256px;
 	overflow: hidden;
 } 
+.hidden {
+	display: none;
+}
+button.trigger1{
+	background-color: red;
+}
+button.trigger2{
+	background-color: blue;
+}
