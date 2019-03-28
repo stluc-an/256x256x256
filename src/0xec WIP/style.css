@@ -7,16 +7,49 @@ html{
 body {
 	padding: 0; 
 	margin: 0;
-	background: white;
+	background: yellow;
 	width : 256px;
 	height : 256px;
 	overflow: hidden;
 } 
 
-#Fuck{
+#azerty {
+    color: red;
     
 }
 
 .hide{
-    display: none;
+    display:none;
+}
+
+#Button1 {
+    margin-bottom: 10px;
+    margin-left: 96px;
+    
+    
+}
+
+#Change {
+    
+    
+}
+
+.Input1{
+    width: 192px;
+    margin-left: 32px;
+}
+
+#Selector{
+    font-size: 14px;
+    text-align: center;
+}
+
+#Instructions{
+    font-size: 13px;
+    text-align: center;
+}
+
+#h1{
+    color:darkred;
+    text-align: center;
 }

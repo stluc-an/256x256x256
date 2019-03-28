@@ -1,0 +1,45 @@
+html{
+	padding: 0; 
+	margin: 0;
+	overflow: hidden;
+	background: white;
+}
+body {
+	padding: 0; 
+	margin: 0;
+	background: aqua;
+	width : 256px;
+	height : 256px;
+	overflow: hidden;
+}
+
+#Redirect{
+    font-size: 24px;
+    text-align: center;
+    
+}
+
+.resize {
+ 
+  background-color: #29e;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  width: 10px;
+  height: 10px;
+  /* This makes things *much* easier */
+  box-sizing: border-box;
+}
+
+.resize-container{
+    margin-top:53px;
+    margin-left: 53px;
+    align-content: center;
+        width: 150px;
+    height: 150px;
+    background: red;
+}
+
+.hide{
+    display:none;
+}

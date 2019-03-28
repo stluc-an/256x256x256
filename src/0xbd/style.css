@@ -1,0 +1,40 @@
+html{
+	padding: 0; 
+	margin: 0;
+	overflow: hidden;
+	background: white;
+}
+body {
+	padding: 0; 
+	margin: 0;
+	background: lightgray;
+	width : 256px;
+	height : 256px;
+	overflow: hidden;
+}
+
+#Redirect1{
+    font-size: 24px;
+    text-align: center;
+    margin-top: 104px;
+}
+
+
+#FTBody{
+    background-color: azure;
+}
+
+#FTH1{
+    font-size: 24px;
+    text-align: center;
+    margin-top: 104px;
+}
+#YouWonBody{
+        background-color: beige;
+}
+
+#H1I{
+    font-size: 18px;
+    text-align: center;
+    color:red;
+}

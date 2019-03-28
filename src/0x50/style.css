@@ -1,0 +1,15 @@
+#rotate-area {
+  overflow: hidden;
+  touch-action: none;
+}
+
+#arrow {
+  width: 100%;
+  height: 100%;
+}
+
+#angle-info {
+  color: #666;
+  font-size: 2em;
+  position: absolute;
+}
