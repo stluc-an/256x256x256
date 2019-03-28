@@ -13,13 +13,17 @@ body {
 	overflow: hidden;
 } 
 
-#TVP_01{
+.trigger1{
 	background-image: url(./../../public/images/TVP_01.png);
-	width: 56px;
-	height: 56px;
+	position: absolute;
+	background-repeat: no-repeat;;
+	top: 0px;
+	left: 0px;
+	width: 80px;
+	height: 80px;
 }
 
-#TVP_02{
+.trigger2{
 	background-image: url(./../../public/images/TVP_02.png);
 	width: 298px;
 	height: 256px;
