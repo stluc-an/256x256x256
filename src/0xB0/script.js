@@ -11,12 +11,12 @@ function setup(){
 	window.onfocus = weAreFocus;
 }
 
-function weAreFocus (event){
+function weAreFocus(event){
 	var h1 = document.querySelector("h1");
 	h1.classList.remove("hide");
 
 	interact('.trigger');
-	.on("tap", tapHandler);
+	on("tap", tapHandler);
 }
 
 function tapHandler(){
@@ -24,6 +24,3 @@ console.log("tapHandler");
 top.postMessage('SUCCESS', '*');
 	
 }
-
-
-

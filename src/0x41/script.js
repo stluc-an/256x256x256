@@ -6,14 +6,16 @@
 \*----------------------------------------*/
 document.addEventListener("DOMContentLoaded", setup);
 
+var contener;
 
 function setup(){
-	interact('.trigger')
-	.resizable({
+	contener = interact('.trigger1');
+	contener.resizable({
 		// resize from all edges and corners
 		edges: { left: true, right: true, bottom: true, top: true },
+		inertia:true
 	})
-	.on('resizemove', function (event) {
+	contener.on('resizemove', function (event) {
 		var target = event.target,
 		x = (parseFloat(target.getAttribute('data-x')) || 0),
 		y = (parseFloat(target.getAttribute('data-y')) || 0);
@@ -31,9 +33,9 @@ function setup(){
 
 		target.setAttribute('data-x', x);
 		target.setAttribute('data-y', y);
-		//target.textContent = Math.round(event.rect.width) + '\u00D7' + Math.round(event.rect.height);
+		target.textContent = Math.round(event.rect.width) + '\u00D7' + Math.round(event.rect.height);
 
-		if(event.rect.width > 100 && event.rect.height > 100){
+		if(event.rect.width > 200 && event.rect.height > 230){
 			resizedHandler();
 		}
 	});
@@ -41,19 +43,23 @@ function setup(){
 
 
 
-function resizedEndHandler(){
-	var TVP_01 = document.querySelector("trigger TVP_01");
-	TVP_01.classList.add("hide");
-
+function resizedHandler(){
+	contener.off('resizemove');
+	imgChange();
 	console.log("resizedHandler");
-
-	interact('.trigger')
-	.on("doubletap", doubleTapHandler)
 }
 
-function doubleTapHandler (event){
-	var TVP_02 = document.querySelector("trigger2 TVP_02 hide");
-	TVP_01.classList.remove("hide");
+function imgChange(){
+	var trigger1 = document.querySelector("trigger1");
+	trigger1.classList.add("hide");
+	var trigger2 = document.querySelector("tvp_02");
+	trigger2.classList.remove("hide");
+
+	trigger2.on("doubletap", doubleTapHandler);
+
+}
+
+function doubleTapHandler (){
 
 	top.postMessage('SUCCESS', '*');
 	console.log("doubleTapHandler");
