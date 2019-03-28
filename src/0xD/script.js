@@ -5,32 +5,33 @@
   @Last Modified time: 2019-01-31 12:06:22
 \*----------------------------------------*/
 document.addEventListener("DOMContentLoaded", setup);
-var angle = 0;
-
+var angle =0;
+var chronoTimeout;
 
 function setup(){
-
-	
+	///setInterval(animate, 42);
 	requestAnimationFrame(animate);
-	//démarrer chrono de trois secondes
-	chronoTimeout = setTimeout(timeoutHandler,3000);
 
-	window.onmousedown = function(){
-			clearTimeout(chronoTimeout);
-			chronoTimeout = setTimeout(timeoutHandler,3000);
+	chronoTimeout = setTimeout(timeoutHandler, 3000);
+	
+
+	window.onmousemove = function(){
+		clearTimeout(chronoTimeout);
+		chronoTimeout = setTimeout(timeoutHandler, 3000);
+
 	}
 }
+
 function timeoutHandler(){
 	var img = document.querySelector("img");
-	img.classList.add("hidden");
+	img.classList.add("hide");
 	var h1 = document.querySelector("h1");
-	h1.classList.remove("hidden");
+	h1.classList.remove("hide");
 }
 
 function animate(){
-	angle += 10;
+	angle += -10;
 	var img = document.querySelector("img");
-	img.style.transform = "rotate("+angle+"deg)";
+	img.style.transform = "rotate(" + angle + "deg)";
 	requestAnimationFrame(animate);
-
 }

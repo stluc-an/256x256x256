@@ -10,8 +10,7 @@ function weAreOnline (event){
 	document.body.classList.add("red");
 	top.postMessage('SUCCESS', '*');
 	console.log("weAreOnline");
-	open: "http://google.com"
-	interact(".toTap").on("tap", tapHandler);
+	window.ononline = null;
 }
 
 function setup(){

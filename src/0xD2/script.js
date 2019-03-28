@@ -52,6 +52,10 @@ function dragMoveHandler (event){
 function setup2(){
 	interact('.trigger')
 	.draggable({
+
+		inertia: true,
+
+		autoScroll: true,
 		// call this function on every dragmove event
 		onmove: dragMoveHandler
 	});

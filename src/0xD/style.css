@@ -11,21 +11,17 @@ body {
 	width : 256px;
 	height : 256px;
 	overflow: hidden;
-}
-.hidden{
-	display: none;
 } 
 
-img{
-	width: 256px;
-	height: 256px;
-	transform: rotate(1400deg);
+.hide {
+	display:none;
 }
 
-h1{
-	color:lime;
-	transform: translate(0, 114px);
-	width: 100%;
-	text-align: CENTER;
+img{
+	height: 256px;
+	transform: rotate(0deg);
+}
 
+h1{ 
+	color: lime;
 }

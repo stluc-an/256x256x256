@@ -2,7 +2,7 @@
   256x256x256 - script.js
   @author Evrard Vincent (vincent@ogre.be)
   @Date:   2018-02-27 12:27:03
-  @Last Modified time: 2019-01-31 12:59:14
+  @Last Modified time: 2019-03-01 12:26:37
 \*----------------------------------------*/
 document.addEventListener("DOMContentLoaded", setup);
 
@@ -35,7 +35,7 @@ function setup(){
 
 		target.setAttribute('data-x', x);
 		target.setAttribute('data-y', y);
-		target.textContent = Math.round(event.rect.width) + '\u00D7' + Math.round(event.rect.height);
+		//target.textContent = Math.round(event.rect.width) + '\u00D7' + Math.round(event.rect.height);
 
 		if(event.rect.width > 100 && event.rect.height > 100){
 			resizedHandler();
