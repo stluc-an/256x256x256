@@ -18,12 +18,6 @@ document.addEventListener("DOMContentLoaded", setup);
   top.postMessage('SUCCESS', '*');
 }*/
 
-
-function setup(){
-  var trigger = interact('.trigger');
-  trigger.draggable({onmove: dragMoveHandler});
-}
-
 document.addEventListener("DOMContentLoaded", setup);
 
 function dragMoveHandler (event){
@@ -40,8 +34,6 @@ function dragMoveHandler (event){
 
 function dragEndHandler(event){
   top.postMessage('SUCCESS', '*');
-  console.log("dragEndHandler");
-  alert("Cooooool");
 }
 
 function setup(){

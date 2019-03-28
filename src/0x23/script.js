@@ -1,11 +1,5 @@
 document.addEventListener("DOMContentLoaded", setup);
 
-function setup(){
-  var trigger = interact('.trigger');
-  trigger.draggable({onmove: dragMoveHandler});
-}
-
-document.addEventListener("DOMContentLoaded", setup);
 
 function dragMoveHandler (event){
   var target = event.target,

@@ -2,7 +2,7 @@
   256x256x256 - script.js
   @author Evrard Vincent (vincent@ogre.be)
   @Date:   2018-02-27 12:27:03
-  @Last Modified time: 2019-01-31 12:10:49
+  @Last Modified time: 2019-03-28 15:03:29
 \*----------------------------------------*/
 document.addEventListener("DOMContentLoaded", setup);
 
@@ -28,8 +28,6 @@ function dragMoveHandler (event){
 	// update the posiion attributes
 	target.setAttribute('data-x', x);
 	target.setAttribute('data-y', y);
-	console.log("dragMoveHandler");
-	top.postMessage('SUCCESS', '*');
 
 
 	interact('#rotate-area').gesturable({

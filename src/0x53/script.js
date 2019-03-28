@@ -2,14 +2,10 @@
   256x256x256 - script.js
   @author Evrard Vincent (vincent@ogre.be)
   @Date:   2018-02-27 12:27:03
-  @Last Modified time: 2019-03-01 13:00:03
+  @Last Modified time: 2019-03-28 15:50:09
 \*----------------------------------------*/
 document.addEventListener("DOMContentLoaded", setup);
 
-function rotateHandler(){
-	top.postMessage('SUCCESS', '*');
-	console.log("resizedHandler");
-}
 var angle = 0;
 function setup(){
 	interact('#rotate-area').gesturable({
@@ -21,7 +17,7 @@ function setup(){
 
 			document.querySelector('#angle-info').textContent = angle.toFixed(2) + '\u00b0';
 			if(rotate > 100 && rotate < 180){
-				rotateHandler();
+				setup2()
 			}
 		}
 	});
@@ -45,7 +41,7 @@ function dragEndHandler(event){
 	console.log("dragEndHandler");
 }
 
-function setup(){
+function setup2(){
 	interact('.trigger')
 	.draggable({
 		// call this function on every dragmove event

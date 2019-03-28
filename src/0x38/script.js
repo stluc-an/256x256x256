@@ -2,7 +2,7 @@
   256x256x256 - script.js
   @author Evrard Vincent (vincent@ogre.be)
   @Date:   2018-02-27 12:27:03
-  @Last Modified time: 2019-01-31 12:18:31
+  @Last Modified time: 2019-03-28 15:27:22
 \*----------------------------------------*/
  document.addEventListener("DOMContentLoaded", setup);
 
@@ -46,8 +46,7 @@ function setup2(){
 	swipe.get('swipe').set({ direction: Hammer.DIRECTION_ALL });
 	// detect swipe and call to a function
 	swipe.on('swiperight swipeleft swipeup swipedown', function(e) {
-			alert(e.type);
-
+			
 		if(e.type == 'swiperight'){}
 		if(e.type == 'swipeleft'){}
 		if(e.type == 'swipedown'){}
@@ -55,11 +54,11 @@ function setup2(){
 			
 			
 
- 	var img = document.querySelector("img");
-	img.classList.add("hide");
-	var imgSucces = document.querySelector("img.succes");
-	imgSucces.classList.remove("hide");
-	 
+	 	var img = document.querySelector("img");
+		img.classList.add("hide");
+		var imgSucces = document.querySelector("img.succes");
+		imgSucces.classList.remove("hide");
+		 dragEndHandler();
 	});
 }
 
