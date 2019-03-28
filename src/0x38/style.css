@@ -3,7 +3,18 @@ html{
 	margin: 0;
 	overflow: hidden;
 	background: white;
+
 }
+
+ 
+ h1{
+	color: white;
+	width: 100%;
+	 
+	 
+
+	}
+ 
 body {
 	padding: 0; 
 	margin: 0;
@@ -13,16 +24,25 @@ body {
 	overflow: hidden;
 } 
 
+	
+
 .dropzone{
 	position: absolute;
 	top: 50px;
-	left: 50px;
-	width: 150px;
-	height: 150px;
+	left: 80px;
+	width: 170px;
+	height: 170px;
+	 
 	 
 }
 
 svg{
 	    border: solid 2px black;
     border-radius: 50%;
+
+
 }
+
+.hide{
+	display: none;
+

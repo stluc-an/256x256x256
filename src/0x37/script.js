@@ -1,4 +1,4 @@
-  document.addEventListener("DOMContentLoaded", setup);
+document.addEventListener("DOMContentLoaded", setup);
 
 function dragMoveHandler (event){
 	var target = event.target,
@@ -13,28 +13,46 @@ function dragMoveHandler (event){
 	
 }
 
-function dragEndHandler(event){
+/*function dragEndHandler(event){
 	top.postMessage('SUCCESS', '*');
 	console.log("dragEndHandler");
  
 	 var img = document.querySelector("img");
 	img.classList.add("hide");
-	var h1 = document.querySelector("h1");
-	h1.classList.remove("hide");
+	var imgSucces = document.querySelector("img.succes");
+	imgSucces.classList.remove("hide");
 
-}
+}*/
 
 function setup(){
 	interact('.trigger')
 	.draggable({
 		// call this function on every dragmove event
 		onmove: dragMoveHandler,
-		onend: dragEndHandler,
+		onend: setup2,
 	});
 
-    interact('.trigger')
+ 
+}
+
+function tapHandler (event){
+	top.postMessage('SUCCESS', '*');
+	console.log("tapHandler");
+	event.target.style.backgroundColor="green";
+}
+
+function setup2(){
+
+	var img = document.querySelector("img");
+	img.classList.add("hide");
+	var imgSucces = document.querySelector("img.succes");
+	imgSucces.classList.remove("hide");
+
+	interact('.trigger2')
 	.on("hold", tapHandler)
 }
+
+
 
 
 

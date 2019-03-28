@@ -1,27 +1,48 @@
 html{
-	padding: 0; 
-	margin: 0;
-	overflow: hidden;
-	background: white;
+  padding: 0; 
+  margin: 0;
+  overflow: hidden;
+  background: white;
 }
-
 body {
-	padding: 0; 
-	margin: 0;
-	background: black;
-	width : 256px;
-	height : 256px;
-	overflow: hidden;
-} 
+  padding: 0; 
+  margin: 0;
+  background: white;
+  width : 256px;
+  height : 256px;
+  overflow: hidden;
+ } 
 
-.hidden{
-	display: none;
+.circle{
+  width:100px;
+  height:100px;
+  border-radius: 50%;
+
 }
 
-.trigger1{
-	background-color: red;
+.blue{
+  background-color: transparent;
+  margin-top: 175px;
+  margin-left: 152px;
+  position: relative;
+  z-index: 0;
 }
 
-.trigger2{
-	background-color: blue;
+/*.carre {
+  width:20px;
+  height:20px;
+  margin-top: 150px;
+  margin-left: 152px;
+  position: absolute;
+  border: solid 2px red;
+  z-index: -1;
+}*/
+
+.dropzone{
+  position: absolute;
+  top: 50px;
+  left: 10px;
+  width: auto;
+  border: solid 5px transparent;
 }
+

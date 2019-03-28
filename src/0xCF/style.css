@@ -1,0 +1,62 @@
+html{
+	padding: 0; 
+	margin: 0;
+	overflow: hidden;
+	background: white;
+}
+body {
+	padding: 0; 
+	margin: 0;
+	background: orange;
+	width : 256px;
+	height : 256px;
+	overflow: hidden;
+} 
+.carreaux img{
+	width: 256px;
+	position:relative;
+	top:51px;
+}
+.minutor img{
+	width:250px;
+	height: 250px;
+	position: relative;
+	bottom: 370px;
+    left: 34px;
+}
+.resize{
+	transform:scale(0.2,0.2);
+}
+.translate{
+	transform:translate(10px,30px);
+}
+#minutes{
+	    position: relative;
+    bottom: 256px;
+}
+.hot img{
+	width: 130px;
+    height: 90px;
+    position: relative;
+    bottom: 10px;
+    left: 30px;
+}
+.tac{
+	width: 130px;
+    height: 53px;
+    background-color: black;
+    position: relative;
+    bottom: 92px;
+    left: 34px;
+    }
+ .hidden{
+ 	display: none;
+ }
+ .noWifi img{
+ 	width: 100px;
+    height: 100px;
+    position: relative;
+    bottom: 270px;
+    left: 148px;
+}
+ }

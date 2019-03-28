@@ -6,29 +6,24 @@
 \*----------------------------------------*/
 document.addEventListener("DOMContentLoaded", setup);
 
-function resizedHandler(){
+function tapHandler (event){
 	top.postMessage('SUCCESS', '*');
-	console.log("resizedHandler");
+	console.log("tapHandler");
+	event.target.style.backgroundColor="green";
 }
 
 function setup(){
-	if (window.DeviceMotionEvent == undefined) {
-        //No accelerometer is present. Use buttons. 
-        alert("no accelerometer");
-    }
-    else {
-        alert("accelerometer found");
-        window.addEventListener("devicemotion", function(event){
-			var aX = event.accelerationIncludingGravity.x*1;
-			var aY = event.accelerationIncludingGravity.y*1;
-			var aZ = event.accelerationIncludingGravity.z*1;
-			//The following two lines are just to calculate a
-			// tilt. Not really needed. 
-			var xPosition = Math.atan2(aY, aZ);
-			var yPosition = Math.atan2(aX, aZ);
-			document.querySelector("#X").innerText = xPosition;
-			document.querySelector("#Y").innerText = yPosition;
-        }, true);
-    }
+	interact('.trigger')
+	.on("hold", tapHandler)
+}
 
+/*je n'arrive pas à faire se suivre ces 2 actions*/
+
+function weAreFocus (event){
+	document.body.classList.add("red");
+	
+}
+
+function setup(){
+	window.onfocus = weAreFocus;
 }

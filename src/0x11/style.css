@@ -1,0 +1,64 @@
+html{
+	padding: 0; 
+	margin: 0;
+	overflow: hidden;
+	background: white;
+}
+body {
+	padding: 0; 
+	margin: 0;
+	background: black;
+	width : 256px;
+	height : 256px;
+	overflow: hidden;
+} 
+#pan{
+	width: 200px;
+	height: 200px;
+	border-radius: 100px;
+	background-image: url("./../../public/images/poele.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	right:21px;
+	top: 10px;
+}
+img{
+	width: 100px;
+}
+.egg{
+	position: relative;
+	bottom: 180px;
+	left:170px;
+}
+
+.hide{
+	display: none;
+}
+.brokenEgg{
+	width: 100px;
+    height: 100px;
+    position: relative;
+    bottom: 172px;
+    left: 120px;
+}
+.panEgg1{
+	width: 110px;
+    height: 110px;
+    position: relative;
+    bottom: 320px;
+    left: -2px;
+}
+.panEgg2{
+	width: 110px;
+    height: 110px;
+    position: relative;
+    bottom: 491px;
+    left: 24px;
+}
+#trigger5 img{
+	width:140px;
+}
+#trigger6 img{
+	width:140px;
+}

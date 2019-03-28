@@ -7,22 +7,22 @@ html{
 body {
   padding: 0; 
   margin: 0;
-  background: darkgreen;
+  background: teal;
   width : 256px;
   height : 256px;
   overflow: hidden;
 } 
 .circle{
-  width:100px;
-  height:100px;
+  width:75px;
+  height:75px;
   border-radius: 50%;
 }
 
 .blue{
-  background-color: powderblue;
+  background-color: transparent;
 }
 
-h1{
+h3{
   color: lightgrey;
 }
 

@@ -1,5 +1,18 @@
 document.addEventListener("DOMContentLoaded", setup);
 
+function changeHandler (event){
+	var txt = event.target.value;
+	var h3 = document.querySelector("h3");
+	h3.innerText = txt;
+	if(txt == "bonjour"){
+		top.postMessage('SUCCESS', '*');
+		alert("Tu t'es dépêché(e) pour rien ");
+	}
+}
+
+
+document.addEventListener("DOMContentLoaded", setup);
+
 function dragMoveHandler (event){
 	var target = event.target,
 	// keep the dragged position in the data-x/data-y attributes
@@ -15,36 +28,19 @@ function dragMoveHandler (event){
 function dragEndHandler(event){
 	console.log("dragEndHandler");
 	top.postMessage('SUCCESS', '*');
-	alert("AWESOME");
+	alert("Cool");
 }
 
 function setup(){
+	var input = document.querySelector("input");
+	input.onkeyup = changeHandler;
+
 	interact('.trigger')
 	.draggable({
 		// call this function on every dragmove event
 		onmove: dragMoveHandler,
 		onend: dragEndHandler,
 	});
-
-	var input = document.querySelector("input");
-	input.onkeyup = changeHandler;
 }
 
-document.addEventListener("DOMContentLoaded", setup);
-
-function changeHandler (event){
-	var txt = event.target.value;
-	var h1 = document.querySelector("h1");
-	h1.innerText = txt;
-	if(txt == "hello"){
-		top.postMessage('SUCCESS', '*');
-		alert("YOU'RE AMAZING");
-	}
-}
-
-
-/*function setup(){
-	var input = document.querySelector("input");
-	input.onkeyup = changeHandler;
-}*/
 

@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", setup);
 function resizedHandler(){
 	top.postMessage('SUCCESS', '*');
 	console.log("resizedHandler");
+;
 }
 
 
@@ -22,12 +23,22 @@ function setup(){
 
 		 
 		if(e.type == 'swipeup'){}
-		 
+
 	});
+
+}
+
+
+/*je n'arrive pas à faire se suivre ces 2 actions*/
+
+function weAreFocus (event){
+	document.body.classList.add("red");
+	
+}
+
+function setup(){
+	window.onfocus = weAreFocus;
+}
 
 
  
-
-
-
-}
