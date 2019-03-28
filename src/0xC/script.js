@@ -27,6 +27,7 @@ function getSelectionText() {
     if (text) {
  	   console.log(text);
  	   final();
+     alert("SUPER");
 	}
 }
 

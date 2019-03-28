@@ -2,12 +2,12 @@
   256x256x256 - script.js
   @author Evrard Vincent (vincent@ogre.be)
   @Date:   2018-02-27 12:27:03
-  @Last Modified time: 2019-01-29 18:17:55
+  @Last Modified time: 2019-03-28 12:16:18
 \*----------------------------------------*/
-let availableLVL = ["0x1C"];//(new Array(256)).fill().map((p, k)=>{k = k.toString(16);while(k.length<2) k = "0"+k;return "0x"+k});
+let availableLVL = ["0x0"];//(new Array(256)).fill().map((p, k)=>{k = k.toString(16);while(k.length<2) k = "0"+k;return "0x"+k});
 let historyLVL = [];
 let failTimeout ;
-let failAfter = 140000;
+let failAfter = 14000;
 let scoreDom;
 let totalDom;
 let winDom;

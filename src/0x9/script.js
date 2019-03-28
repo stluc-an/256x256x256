@@ -30,5 +30,10 @@ function stopShake(){
 }
 
 function shakeHandler(){
+<<<<<<< HEAD
     alert("OKOK , stop , be patient!");
 }
+=======
+    alert("Shaked");
+}
+>>>>>>> Haibo14

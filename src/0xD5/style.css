@@ -7,11 +7,14 @@ html{
 body {
 	padding: 0; 
 	margin: 0;
+
 	background: white;
+
 	width : 256px;
 	height : 256px;
 	overflow: hidden;
 } 
+
 
 .hide{
 	display: none;
@@ -30,6 +33,7 @@ img{
     height: 256px;
     transform: rotate(0deg);
 }
+
 #rotate-area{
 	width: 100%;
 	height: 100%;

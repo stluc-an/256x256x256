@@ -15,7 +15,7 @@ function swipeHandler(){
 
 
 function setup(){
-	var swipe = new Hammer(document);
+	var swipe = new Hammer(document.body);
 	swipe.get('swipe').set({ direction: Hammer.DIRECTION_ALL });
 	// detect swipe and call to a function
 	swipe.on('swiperight swipeleft swipeup swipedown', function(e) {
