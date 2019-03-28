@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", setup);
 
 function final(){
 top.postMessage('SUCCESS', '*');
-	
+alert("You are a boss");
 }
 
 function getSelectionText() {
@@ -26,14 +26,20 @@ function getSelectionText() {
     }
     if (text) {
  	   console.log(text);
- 	   final();
+ 	  activeResize();
 	}
 }
 function setup(){
+  document.onmouseup = document.onkeyup = document.onselectionchange = getSelectionText;
+}
+
+function activeResize(){
+
   interact('.trigger')
   .resizable({
     // resize from all edges and corners
     edges: { left: true, right: true, bottom: true, top: true },
+
   })
   .on('resizemove', function (event) {
     var target = event.target,
@@ -55,17 +61,14 @@ function setup(){
     target.setAttribute('data-y', y);
     //target.textContent = Math.round(event.rect.width) + '\u00D7' + Math.round(event.rect.height);
 
-    if(event.rect.width > 100 && event.rect.height > 100){
-      resizedHandler();
+    if(event.rect.width > 250 && event.rect.height > 250){
+      final();
     }
   });
 }
 
 
 
-function setup(){
-	document.onmouseup = document.onkeyup = document.onselectionchange = getSelectionText;
-}
 
 
 
